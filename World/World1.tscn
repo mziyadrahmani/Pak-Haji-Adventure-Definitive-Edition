@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://h2ycwmnb03d0"]
+
+[ext_resource type="TileSet" uid="uid://m1bpt1i8eseo" path="res://World/WorldTileset.tres" id="1_fuo4v"]
+
+[node name="World1" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource("1_fuo4v")
+format = 2
+layer_0/tile_data = PackedInt32Array(131075, 262148, 0, 196611, 262148, 1, 262147, 262148, 1, 327683, 262148, 2, 327684, 262148, 2, 327685, 262148, 2, 262149, 262148, 1, 262150, 262148, 1, 196614, 262148, 1, 196613, 262148, 1, 131077, 262148, 0, 131076, 262148, 0, 196612, 262148, 1, 262148, 262148, 1, 196610, 196612, 1, 262146, 196612, 1, 131074, 196612, 0, 327682, 196612, 2, 327686, 327684, 2, 131078, 327684, 0, 196615, 327684, 0, 262151, 327684, 2)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(253, 150)
+zoom = Vector2(1.674, 1.674)
+position_smoothing_enabled = true

@@ -38,14 +38,14 @@ alignment = 1
 layout_mode = 2
 theme = ExtResource("2_6uocv")
 theme_type_variation = &"HeaderSmall"
-text = "Mulai Game Baru ?"
+text = "Save Data Ditemukan, Lanjut?"
 
-[node name="Button" type="Button" parent="CenterContainer/VBoxContainer"]
+[node name="yes" type="Button" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("3_78f0r")
 text = "Iyah"
 
-[node name="Button2" type="Button" parent="CenterContainer/VBoxContainer"]
+[node name="no" type="Button" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("3_78f0r")
 text = "Enggak"
