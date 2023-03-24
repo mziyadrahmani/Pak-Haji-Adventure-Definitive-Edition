@@ -1,9 +1,9 @@
-[gd_resource type="Theme" load_steps=9 format=3 uid="uid://bb6euqidtheqa"]
+[gd_resource type="Theme" load_steps=10 format=3 uid="uid://drx7ydhy37t5f"]
 
-[ext_resource type="Texture2D" uid="uid://ct5jr8yn3mayp" path="res://Main Menu/btn1.png" id="1_4sgs3"]
 [ext_resource type="FontFile" uid="uid://d0xo56y1u63cm" path="res://Fonts/VT323-Regular.ttf" id="1_n1dm1"]
-[ext_resource type="Texture2D" uid="uid://choljyu036331" path="res://Main Menu/btn1hover.png" id="2_uj448"]
-[ext_resource type="Texture2D" uid="uid://dklbdlvw4sobo" path="res://Main Menu/btn1press.png" id="3_u011d"]
+[ext_resource type="Texture2D" uid="uid://choljyu036331" path="res://UI/btn1hover.png" id="2_qjkx7"]
+[ext_resource type="Texture2D" uid="uid://ct5jr8yn3mayp" path="res://UI/btn1.png" id="3_l1msn"]
+[ext_resource type="Texture2D" uid="uid://dklbdlvw4sobo" path="res://UI/btn1press.png" id="4_y3278"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l3wif"]
 content_margin_left = 4.0
@@ -18,7 +18,7 @@ corner_radius_bottom_left = 3
 corner_detail = 5
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4gm6q"]
-texture = ExtResource("2_uj448")
+texture = ExtResource("2_qjkx7")
 region_rect = Rect2(148, 360, 744, 250)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n4chg"]
@@ -26,12 +26,14 @@ content_margin_left = 20.0
 content_margin_top = 20.0
 content_margin_right = 20.0
 content_margin_bottom = 20.0
-texture = ExtResource("1_4sgs3")
+texture = ExtResource("3_l1msn")
 region_rect = Rect2(148, 360, 744, 250)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1fqy3"]
-texture = ExtResource("3_u011d")
+texture = ExtResource("4_y3278")
 region_rect = Rect2(148, 360, 744, 250)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_aojfn"]
 
 [resource]
 Button/colors/font_color = Color(0.12549, 0.192157, 0.313726, 1)
@@ -53,3 +55,14 @@ Button/styles/disabled = SubResource("StyleBoxFlat_l3wif")
 Button/styles/hover = SubResource("StyleBoxTexture_4gm6q")
 Button/styles/normal = SubResource("StyleBoxTexture_n4chg")
 Button/styles/pressed = SubResource("StyleBoxTexture_1fqy3")
+Label/colors/font_color = Color(1, 1, 1, 1)
+Label/colors/font_outline_color = Color(1, 1, 1, 1)
+Label/colors/font_shadow_color = Color(0, 0, 0, 0)
+Label/constants/line_spacing = 3
+Label/constants/outline_size = 0
+Label/constants/shadow_offset_x = 1
+Label/constants/shadow_offset_y = 1
+Label/constants/shadow_outline_size = 1
+Label/font_sizes/font_size = 28
+Label/fonts/font = ExtResource("1_n1dm1")
+Label/styles/normal = SubResource("StyleBoxEmpty_aojfn")

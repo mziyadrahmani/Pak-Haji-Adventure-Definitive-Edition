@@ -1,0 +1,51 @@
+[gd_scene load_steps=4 format=3 uid="uid://lb7jnaegj2rv"]
+
+[ext_resource type="Texture2D" uid="uid://dhmepynfmrowc" path="res://UI/Popup.png" id="1_5if17"]
+[ext_resource type="Theme" uid="uid://d22dxcga8pys6" path="res://addons/dialogic/Editor/Theme/MainTheme.tres" id="2_6uocv"]
+[ext_resource type="Theme" uid="uid://drx7ydhy37t5f" path="res://Main Menu/Maintheme.tres" id="3_78f0r"]
+
+[node name="LoadGame" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -598.5
+offset_top = -511.5
+offset_right = 598.5
+offset_bottom = 512.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer"]
+layout_mode = 2
+texture = ExtResource("1_5if17")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_6uocv")
+theme_type_variation = &"HeaderSmall"
+text = "Mulai Game Baru ?"
+
+[node name="Button" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_78f0r")
+text = "Iyah"
+
+[node name="Button2" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_78f0r")
+text = "Enggak"

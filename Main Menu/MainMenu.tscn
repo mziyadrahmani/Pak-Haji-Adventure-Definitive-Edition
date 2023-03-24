@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dqt2cff8boivs"]
 
-[ext_resource type="Theme" uid="uid://bb6euqidtheqa" path="res://Main Menu/Maintheme.tres" id="1_6vlsk"]
+[ext_resource type="Theme" uid="uid://drx7ydhy37t5f" path="res://Main Menu/Maintheme.tres" id="1_6vlsk"]
 [ext_resource type="Script" path="res://Main Menu/MainMenu.gd" id="1_7b5lx"]
 [ext_resource type="AnimationLibrary" uid="uid://db744u6r62xwt" path="res://Transition.res" id="3_kcmn3"]
 
@@ -21,40 +21,45 @@ layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 31.0
-offset_top = -302.0
-offset_right = 199.0
-offset_bottom = -11.0
+offset_left = 52.0
+offset_top = -338.0
+offset_right = 220.0
+offset_bottom = -47.0
 grow_vertical = 0
 
 [node name="PlayButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("1_6vlsk")
-text = "Play"
+text = "Mulai"
 
 [node name="SettingsButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("1_6vlsk")
-text = "Settings"
+text = "Pengaturan"
 
 [node name="AboutButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("1_6vlsk")
-text = "About"
+text = "Tentang"
 
 [node name="ExitButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("1_6vlsk")
-text = "Exit"
+text = "Keluar"
 
 [node name="ColorRect2" type="ColorRect" parent="."]
+visible = false
+layout_mode = 0
 offset_left = -75.0
 offset_top = -41.0
 offset_right = 1261.0
 offset_bottom = 727.0
-color = Color(0, 0, 0, 1)
+color = Color(0, 0, 0, 0)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "Transition": ExtResource("3_kcmn3")
 }
+
+[connection signal="button_up" from="VBoxContainer/PlayButton" to="." method="_on_play_button_button_up"]
+[connection signal="button_up" from="VBoxContainer/ExitButton" to="." method="_on_exit_button_button_up"]
