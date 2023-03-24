@@ -1,18 +1,20 @@
-[gd_scene load_steps=2 format=3 uid="uid://dqt2cff8boivs"]
+[gd_scene load_steps=4 format=3 uid="uid://dqt2cff8boivs"]
 
 [ext_resource type="Theme" uid="uid://bb6euqidtheqa" path="res://Main Menu/Maintheme.tres" id="1_6vlsk"]
+[ext_resource type="Script" path="res://Main Menu/MainMenu.gd" id="1_7b5lx"]
+[ext_resource type="AnimationLibrary" uid="uid://db744u6r62xwt" path="res://Transition.res" id="3_kcmn3"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 26.0
-offset_top = 388.0
-offset_right = -940.0
-offset_bottom = -32.0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 4.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_7b5lx")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -44,3 +46,15 @@ text = "About"
 layout_mode = 2
 theme = ExtResource("1_6vlsk")
 text = "Exit"
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+offset_left = -75.0
+offset_top = -41.0
+offset_right = 1261.0
+offset_bottom = 727.0
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"Transition": ExtResource("3_kcmn3")
+}
