@@ -11,10 +11,11 @@ config_version=5
 [application]
 
 config/name="Pak Haji Adventure - Definitive Edition"
-run/main_scene="res://Main Menu/Splash.tscn"
+run/main_scene="res://World/World1.tscn"
 config/features=PackedStringArray("4.0", "Mobile")
 run/flush_stdout_on_print=true
 config/icon="res://icon.svg"
+config/quit_on_go_back=false
 
 [autoload]
 
@@ -53,6 +54,10 @@ jump={
 [input_devices]
 
 pointing/emulate_touch_from_mouse=true
+
+[physics]
+
+2d/default_gravity_vector=Vector2(0, 0)
 
 [rendering]
 

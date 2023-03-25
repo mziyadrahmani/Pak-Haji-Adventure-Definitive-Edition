@@ -1,42 +1,69 @@
-[gd_scene load_steps=5 format=3 uid="uid://h2ycwmnb03d0"]
+[gd_scene load_steps=7 format=3 uid="uid://h2ycwmnb03d0"]
 
 [ext_resource type="TileSet" uid="uid://m1bpt1i8eseo" path="res://World/WorldTileset.tres" id="1_fuo4v"]
 [ext_resource type="PackedScene" uid="uid://bklbjr8e326qx" path="res://Sprite/Pak Haji/PakHaji.tscn" id="2_1e1n7"]
 [ext_resource type="Script" path="res://World/Camera2D.gd" id="2_mw7na"]
 [ext_resource type="Texture2D" uid="uid://dklbdlvw4sobo" path="res://UI/btn1press.png" id="4_sk7jn"]
+[ext_resource type="Texture2D" uid="uid://choljyu036331" path="res://UI/btn1hover.png" id="5_3msj4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_edd0w"]
+size = Vector2(670, 300)
 
 [node name="World1" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource("1_fuo4v")
 format = 2
-layer_0/tile_data = PackedInt32Array(720895, 4, 1, 655360, 65540, 1, 655361, 65540, 1, 655362, 65540, 1, 655359, 4, 0, 589824, 65540, 1, 589825, 65540, 0, 589826, 65540, 0, 589827, 131076, 0, 655363, 65540, 1, 524288, 131076, 0, 720899, 65540, 1, 655364, 65540, 0, 720900, 65540, 1, 720898, 65540, 1, 720897, 65540, 1, 786431, 4, 1, 851967, 65540, 2, 720896, 65540, 1, 786432, 65540, 2, 786433, 65540, 2, 720901, 65540, 1, 720902, 65540, 1, 655365, 65540, 0, 655366, 65540, 0, 786439, 131076, 2, 655367, 131076, 0, 720903, 131076, 1, 196608, 393220, 0, 262144, 262148, 1, 327679, 196612, 1, 327680, 262148, 2, 327681, 262148, 2, 327682, 327684, 2, 262146, 458756, 1, 196609, 262148, 1, 262145, 262148, 1, 393215, 196612, 2, 262143, 196612, 0, 131073, 262148, 0, 131074, 393220, 0, 196610, 262148, 1, 131072, 196612, 0, 196611, 327684, 1, 262147, 327684, 2, 131075, 327684, 1, 65539, 327684, 0, 65538, 196612, 0, 786434, 65540, 2, 786435, 65540, 1, 786436, 65540, 1, 786437, 65540, 1, 851973, 131076, 2, 851972, 65540, 2, 851971, 4, 2, 786438, 65540, 2)
+layer_0/tile_data = PackedInt32Array(720895, 4, 1, 655360, 65540, 1, 655361, 65540, 1, 655362, 65540, 1, 655359, 4, 0, 589824, 65540, 1, 589825, 65540, 0, 589826, 65540, 0, 589827, 131076, 0, 655363, 65540, 1, 524288, 131076, 0, 720899, 65540, 1, 655364, 65540, 0, 720900, 65540, 1, 720898, 65540, 1, 720897, 65540, 1, 786431, 4, 1, 851967, 65540, 2, 720896, 65540, 1, 786432, 65540, 2, 786433, 65540, 2, 720901, 65540, 1, 720902, 65540, 1, 655365, 65540, 0, 655366, 65540, 0, 786439, 65540, 1, 655367, 131076, 0, 720903, 65540, 1, 196608, 393220, 0, 262144, 262148, 1, 327679, 196612, 1, 327680, 262148, 2, 327681, 262148, 2, 327682, 327684, 2, 262146, 458756, 1, 196609, 262148, 1, 262145, 262148, 1, 393215, 196612, 2, 262143, 196612, 0, 131073, 262148, 0, 131074, 393220, 0, 196610, 262148, 1, 131072, 196612, 0, 196611, 327684, 1, 262147, 327684, 2, 131075, 327684, 1, 65539, 327684, 0, 65538, 196612, 0, 786434, 65540, 1, 786435, 65540, 1, 786436, 65540, 1, 786437, 65540, 1, 851973, 65540, 1, 851972, 65540, 1, 851971, 65540, 2, 786438, 65540, 1, 786441, 65540, 0, 786442, 65540, 0, 851978, 65540, 1, 851979, 65540, 1, 851977, 65540, 1, 917513, 65540, 1, 917514, 65540, 1, 786443, 131076, 0, 786440, 65540, 1, 851976, 4, 1, 917512, 4, 1, 983048, 65540, 1, 1048584, 131076, 2, 1048583, 4, 2, 983047, 4, 1, 720904, 131076, 0, 917515, 65540, 1, 851980, 65540, 0, 917516, 131076, 1, 851981, 131076, 1, 786445, 4, 1, 720909, 4, 0, 720910, 65540, 0, 786446, 65540, 1, 786447, 65540, 1, 720911, 65540, 0, 720912, 65540, 1, 720913, 65540, 1, 655377, 65540, 1, 589841, 4, 0, 655376, 4, 0, 786448, 65540, 1, 851983, 65540, 1, 851982, 4, 1, 917518, 65540, 1, 917517, 4, 1, 983052, 4, 1, 983053, 65540, 1, 589842, 65540, 1, 917519, 65540, 1, 524306, 65540, 0, 655378, 65540, 1, 720914, 65540, 1, 786449, 65540, 1, 851985, 4, 1, 917521, 65540, 1, 983057, 65540, 2, 589843, 131076, 1, 524307, 131076, 0, 983056, 65540, 2, 917520, 65540, 1, 786450, 65540, 1, 851986, 65540, 1, 917522, 65540, 1, 851984, 131076, 1, 983055, 65540, 2, 655379, 131076, 1, 720915, 131076, 1, 786451, 131076, 1, 851987, 131076, 1, 917523, 131076, 1, 983059, 131076, 1, 1048595, 131076, 2, 983058, 65540, 2, 983054, 65540, 2, 1048589, 131076, 2, 1048588, 4, 2, 983051, 131076, 2, 983050, 65540, 2, 983049, 65540, 2, 917511, 131076, 1, 851975, 131076, 1, 851974, 65540, 1, 917509, 65540, 2, 917510, 65540, 2, 917508, 4, 2, 851970, 4, 2, 393229, 131076, 0, 458765, 131076, 2, 458764, 65540, 1, 458763, 65540, 1, 458762, 65540, 1, 393226, 4, 0, 393227, 65540, 1, 393228, 65540, 1, 327691, 4, 0, 327692, 131076, 0, 458761, 65540, 0, 458760, 4, 0, 524297, 4, 2, 524298, 65540, 2, 524299, 65540, 2, 524300, 131076, 2, 131089, 131076, 1, 131088, 65540, 0, 131087, 4, 0, 196623, 4, 1, 196624, 65540, 1, 65553, 131076, 0, 196625, 65540, 2, 196626, 131076, 2, 262159, 4, 2, 262160, 131076, 2, 196622, 131076, 0)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(79, 158)
-zoom = Vector2(2.24, 2.24)
+zoom = Vector2(3, 3)
 position_smoothing_enabled = true
 script = ExtResource("2_mw7na")
 
 [node name="Player" parent="." instance=ExtResource("2_1e1n7")]
 position = Vector2(80, 159)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="Touchbtn" type="CanvasLayer" parent="."]
+visible = false
 
-[node name="TouchScreenButton" type="TouchScreenButton" parent="CanvasLayer"]
-position = Vector2(32, 415)
+[node name="Control" type="Control" parent="Touchbtn"]
+layout_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -645.0
+offset_top = -708.0
+offset_right = 703.0
+grow_horizontal = 2
+grow_vertical = 0
+pivot_offset = Vector2(341, 443)
+size_flags_horizontal = 8
+size_flags_vertical = 8
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="Touchbtn/Control"]
+process_mode = 3
+position = Vector2(109, 446)
 scale = Vector2(0.228516, 0.263672)
 texture_normal = ExtResource("4_sk7jn")
 action = "left"
 
-[node name="TouchScreenButton2" type="TouchScreenButton" parent="CanvasLayer"]
-position = Vector2(241, 384)
+[node name="TouchScreenButton2" type="TouchScreenButton" parent="Touchbtn/Control"]
+process_mode = 3
+position = Vector2(317, 414)
 scale = Vector2(0.214844, 0.333008)
 texture_normal = ExtResource("4_sk7jn")
 action = "right"
 
-[node name="TouchScreenButton3" type="TouchScreenButton" parent="CanvasLayer"]
-position = Vector2(889, 398)
-scale = Vector2(0.226563, 0.297852)
+[node name="TouchScreenButton3" type="TouchScreenButton" parent="Touchbtn/Control"]
+process_mode = 3
+position = Vector2(837, 321)
+scale = Vector2(0.301758, 0.378906)
 texture_normal = ExtResource("4_sk7jn")
+texture_pressed = ExtResource("5_3msj4")
+shape = SubResource("RectangleShape2D_edd0w")
+passby_press = true
 action = "jump"

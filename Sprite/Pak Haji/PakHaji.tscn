@@ -7,6 +7,7 @@
 radius = 8.0
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
+scale = Vector2(1.41633, 1.41633)
 script = ExtResource("1_xwtgw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -16,9 +17,8 @@ shape = SubResource("CircleShape2D_1knao")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, 2)
 sprite_frames = ExtResource("1_yuwrl")
-animation = &"climb"
-frame = 1
-frame_progress = 0.360798
+animation = &"idle"
+frame_progress = 0.20896
 
 [node name="Area2D" type="Area2D" parent="."]
 

@@ -2,7 +2,7 @@
 
 [ext_resource type="Theme" uid="uid://drx7ydhy37t5f" path="res://Main Menu/Maintheme.tres" id="1_6vlsk"]
 [ext_resource type="Script" path="res://Main Menu/MainMenu.gd" id="1_7b5lx"]
-[ext_resource type="AnimationLibrary" uid="uid://db744u6r62xwt" path="res://Transition.res" id="3_kcmn3"]
+[ext_resource type="AnimationLibrary" path="res://Transition.res" id="3_kcmn3"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3

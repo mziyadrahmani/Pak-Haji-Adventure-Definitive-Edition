@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dtty1783sf8yh" path="res://Main Menu/ZYDXD Logo.png" id="1_x0k0x"]
 [ext_resource type="Script" path="res://Main Menu/Splash.gd" id="1_yhvs4"]
-[ext_resource type="AnimationLibrary" uid="uid://db744u6r62xwt" path="res://Transition.res" id="3_ngioi"]
+[ext_resource type="AnimationLibrary" path="res://Transition.res" id="3_ngioi"]
 
 [node name="Splash" type="Node2D"]
 script = ExtResource("1_yhvs4")
