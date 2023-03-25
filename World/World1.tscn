@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://h2ycwmnb03d0"]
+[gd_scene load_steps=5 format=3 uid="uid://h2ycwmnb03d0"]
 
 [ext_resource type="TileSet" uid="uid://m1bpt1i8eseo" path="res://World/WorldTileset.tres" id="1_fuo4v"]
 [ext_resource type="PackedScene" uid="uid://bklbjr8e326qx" path="res://Sprite/Pak Haji/PakHaji.tscn" id="2_1e1n7"]
+[ext_resource type="Script" path="res://World/Camera2D.gd" id="2_mw7na"]
+[ext_resource type="Texture2D" uid="uid://dklbdlvw4sobo" path="res://UI/btn1press.png" id="4_sk7jn"]
 
 [node name="World1" type="Node2D"]
 
@@ -11,9 +13,30 @@ format = 2
 layer_0/tile_data = PackedInt32Array(720895, 4, 1, 655360, 65540, 1, 655361, 65540, 1, 655362, 65540, 1, 655359, 4, 0, 589824, 65540, 1, 589825, 65540, 0, 589826, 65540, 0, 589827, 131076, 0, 655363, 65540, 1, 524288, 131076, 0, 720899, 65540, 1, 655364, 65540, 0, 720900, 65540, 1, 720898, 65540, 1, 720897, 65540, 1, 786431, 4, 1, 851967, 65540, 2, 720896, 65540, 1, 786432, 65540, 2, 786433, 65540, 2, 720901, 65540, 1, 720902, 65540, 1, 655365, 65540, 0, 655366, 65540, 0, 786439, 131076, 2, 655367, 131076, 0, 720903, 131076, 1, 196608, 393220, 0, 262144, 262148, 1, 327679, 196612, 1, 327680, 262148, 2, 327681, 262148, 2, 327682, 327684, 2, 262146, 458756, 1, 196609, 262148, 1, 262145, 262148, 1, 393215, 196612, 2, 262143, 196612, 0, 131073, 262148, 0, 131074, 393220, 0, 196610, 262148, 1, 131072, 196612, 0, 196611, 327684, 1, 262147, 327684, 2, 131075, 327684, 1, 65539, 327684, 0, 65538, 196612, 0, 786434, 65540, 2, 786435, 65540, 1, 786436, 65540, 1, 786437, 65540, 1, 851973, 131076, 2, 851972, 65540, 2, 851971, 4, 2, 786438, 65540, 2)
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(253, 150)
-zoom = Vector2(1.674, 1.674)
+position = Vector2(79, 158)
+zoom = Vector2(2.24, 2.24)
 position_smoothing_enabled = true
+script = ExtResource("2_mw7na")
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("2_1e1n7")]
-position = Vector2(65, -29)
+[node name="Player" parent="." instance=ExtResource("2_1e1n7")]
+position = Vector2(80, 159)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="CanvasLayer"]
+position = Vector2(32, 415)
+scale = Vector2(0.228516, 0.263672)
+texture_normal = ExtResource("4_sk7jn")
+action = "left"
+
+[node name="TouchScreenButton2" type="TouchScreenButton" parent="CanvasLayer"]
+position = Vector2(241, 384)
+scale = Vector2(0.214844, 0.333008)
+texture_normal = ExtResource("4_sk7jn")
+action = "right"
+
+[node name="TouchScreenButton3" type="TouchScreenButton" parent="CanvasLayer"]
+position = Vector2(889, 398)
+scale = Vector2(0.226563, 0.297852)
+texture_normal = ExtResource("4_sk7jn")
+action = "jump"
