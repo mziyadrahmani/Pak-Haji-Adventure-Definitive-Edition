@@ -3,10 +3,10 @@ extends CharacterBody2D
 
 @export var SPEED = 100
 @export var JUMP_VELOCITY = -200
-@export var gravity = 400
+@export var gravity = 500
 #@export var smoothing = 10
 @onready var animsprite = $AnimatedSprite2D
-#@onready var tween = create_tween()
+
 var isfalling = false
 
 func _ready():
@@ -25,7 +25,6 @@ func _physics_process(delta):
 			print("jumping")
 		else :
 			animsprite.play("fall")
-			animsprite.speed_scale = 1
 			print("falling")
 	else :
 		if (velocity.x == 0):
@@ -38,6 +37,11 @@ func _physics_process(delta):
 	# Handle Jump.
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
+		var tween = create_tween()
+		tween.set_ease(Tween.EASE_IN_OUT)
+		tween.tween_property(animsprite,"scale",Vector2(1,0.7),0.1)
+		tween.tween_property(animsprite,"scale",Vector2(1,1.2),0.2)
+		tween.tween_property(animsprite,"scale",Vector2(1,1),0.2)
 		animsprite.play("jump")
 
 	# Get the input direction and handle the movement/deceleration.
