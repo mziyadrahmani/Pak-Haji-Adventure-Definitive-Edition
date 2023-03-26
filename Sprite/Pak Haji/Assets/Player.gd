@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
-@onready var rot_tween = $RotTween
-@onready var stween = $STween
+@onready var rot_tween = create_tween()
+@onready var stween = create_tween()
 @onready var sprite = $AnimatedSprite2D
 @onready var audio = $AudioStreamPlayer
 

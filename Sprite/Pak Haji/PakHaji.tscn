@@ -11,17 +11,19 @@ scale = Vector2(1.41633, 1.41633)
 script = ExtResource("1_xwtgw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 1)
+position = Vector2(0, 2.8242)
 shape = SubResource("CircleShape2D_1knao")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, 2)
 sprite_frames = ExtResource("1_yuwrl")
-animation = &"idle"
-frame_progress = 0.20896
+animation = &"fall"
+autoplay = "idle"
+frame = 3
+frame_progress = 1.0
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(0, 1)
+position = Vector2(0, 2.8242)
 shape = SubResource("CircleShape2D_1knao")

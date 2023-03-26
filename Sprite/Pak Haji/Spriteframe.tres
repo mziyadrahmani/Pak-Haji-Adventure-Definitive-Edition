@@ -55,20 +55,20 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("9_ipr14")
 }],
-"loop": true,
+"loop": false,
 "name": &"fall",
-"speed": 5.0
+"speed": 6.0
 }, {
 "frames": [{
-"duration": 2.0,
+"duration": 1.0,
 "texture": ExtResource("10_tqye3")
 }, {
-"duration": 2.0,
+"duration": 1.0,
 "texture": ExtResource("11_26bds")
 }],
 "loop": true,
 "name": &"idle",
-"speed": 5.0
+"speed": 3.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -83,9 +83,9 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("15_0h3ga")
 }],
-"loop": true,
+"loop": false,
 "name": &"jump",
-"speed": 5.0
+"speed": 6.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -102,5 +102,5 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk",
-"speed": 5.0
+"speed": 6.0
 }]
