@@ -20,6 +20,7 @@ layer_0/tile_data = PackedInt32Array(720895, 4, 1, 655360, 65540, 1, 655361, 655
 position = Vector2(79, 158)
 zoom = Vector2(3, 3)
 position_smoothing_enabled = true
+position_smoothing_speed = 4.992
 script = ExtResource("2_mw7na")
 
 [node name="PakHaji" parent="." instance=ExtResource("2_1e1n7")]

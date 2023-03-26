@@ -21,9 +21,8 @@ func _physics_process(delta):
 		velocity.y += gravity * delta
 		
 		if velocity.y <= 0 :
-			
 			print("jumping")
-		else :
+		if velocity.y > 0 :
 			animsprite.play("fall")
 			print("falling")
 	else :
