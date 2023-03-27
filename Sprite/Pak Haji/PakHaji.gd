@@ -26,10 +26,11 @@ func _physics_process(delta):
 		var updowndir = Input.get_axis("jump", "down")
 		if updowndir :
 			velocity.y = updowndir * SPEED
-		
+			animsprite.speed_scale = abs(velocity.y) * 0.01
+			animsprite.play("climb")
 		else:
 			velocity.y = move_toward(velocity.x, 0, SPEED)
-			
+			animsprite.play("climbidle")
 	if is_on_wall() :
 		for i in get_slide_collision_count():
 			var collision = get_slide_collision(i)
@@ -42,17 +43,17 @@ func _physics_process(delta):
 	if not is_on_floor() and not isclimbing:
 		velocity.y += gravity * delta
 		
-		if velocity.y <= 0 :
-			pass
+		if (velocity.y <= 0):
+			animsprite.play("jump")
 			#print("jumping")
-		if velocity.y > 0 :
+		if (velocity.y > 0):
 			animsprite.play("fall")
 			#print("falling")
 	else :
-		if (velocity.x == 0):
+		if (velocity.x == 0) and not isclimbing:
 			animsprite.play("idle")
 			#print("idling")
-		else :
+		elif (velocity.x != 0) and not isclimbing: 
 			animsprite.speed_scale = abs(velocity.x) * 0.01
 			animsprite.play("walk")
 			
@@ -65,7 +66,7 @@ func _physics_process(delta):
 		tween.tween_property(animsprite,"scale",Vector2(1,0.7),0.1)
 		tween.tween_property(animsprite,"scale",Vector2(1,1.2),0.2)
 		tween.tween_property(animsprite,"scale",Vector2(1,1),0.2)
-		animsprite.play("jump")
+		
 	
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.

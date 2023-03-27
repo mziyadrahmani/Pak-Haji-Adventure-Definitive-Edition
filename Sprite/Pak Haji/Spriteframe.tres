@@ -65,8 +65,16 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("5_1225m")
 }],
-"loop": true,
+"loop": false,
 "name": &"climb",
+"speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_bb3m5")
+}],
+"loop": true,
+"name": &"climbidle",
 "speed": 5.0
 }, {
 "frames": [{
