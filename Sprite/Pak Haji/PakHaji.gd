@@ -6,33 +6,57 @@ extends CharacterBody2D
 @export var gravity = 500
 #@export var smoothing = 10
 @onready var animsprite = $AnimatedSprite2D
-
+@onready var tilemap = get_node("../TileMap")
+#@onready var crntcoor = animsprite.get_global_position()
 var isfalling = false
-
+var isclimbing = false #false = kanan
+#var trunktile = terrainset
 func _ready():
 	pass
 	
 	
 func _physics_process(delta):
-	
-	#instead of playing animation every time the checker detects, you may try to make a state variable
-	
-	if not is_on_floor():
+	#print(crntcoor)
+	if (velocity.x <0):
+			animsprite.flip_h = true
+	elif (velocity.x >0):
+		animsprite.flip_h = false
+	if isclimbing == true and is_on_wall() :
+		#print("climb")
+		var updowndir = Input.get_axis("jump", "down")
+		if updowndir :
+			velocity.y = updowndir * SPEED
+		
+		else:
+			velocity.y = move_toward(velocity.x, 0, SPEED)
+			
+	if is_on_wall() :
+		for i in get_slide_collision_count():
+			var collision = get_slide_collision(i)
+			var object = collision.get_collider ( )
+			#print(object)
+			if object.name == "Climbable" and object.is_in_group("climbable"):
+				isclimbing = true
+			else :
+				isclimbing = false
+	if not is_on_floor() and not isclimbing:
 		velocity.y += gravity * delta
 		
 		if velocity.y <= 0 :
-			print("jumping")
+			pass
+			#print("jumping")
 		if velocity.y > 0 :
 			animsprite.play("fall")
-			print("falling")
+			#print("falling")
 	else :
 		if (velocity.x == 0):
 			animsprite.play("idle")
-			print("idling")
+			#print("idling")
 		else :
 			animsprite.speed_scale = abs(velocity.x) * 0.01
 			animsprite.play("walk")
-			print("walking")
+			
+			#print("walking")
 	# Handle Jump.
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
@@ -42,20 +66,21 @@ func _physics_process(delta):
 		tween.tween_property(animsprite,"scale",Vector2(1,1.2),0.2)
 		tween.tween_property(animsprite,"scale",Vector2(1,1),0.2)
 		animsprite.play("jump")
-
+	
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction = Input.get_axis("left", "right")
-	if direction:
+	if direction and not isclimbing:
 		velocity.x = direction * SPEED
 		
 		
-		if (velocity.x <0):
-			animsprite.flip_h = true
-		elif (velocity.x >0):
-			animsprite.flip_h = false
 		
 		
+	elif direction and isclimbing :	
+		velocity.x = direction * SPEED
+		velocity.y += gravity * delta
+		if not is_on_wall():
+			isclimbing = false 
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
