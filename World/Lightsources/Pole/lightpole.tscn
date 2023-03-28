@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://ki68ournfeuv"]
+
+[ext_resource type="Texture2D" uid="uid://51bwnf0w1oxg" path="res://World/Lightsources/Pole/game filter_Copy of Paint Layer 5.png" id="1_ns0jx"]
+[ext_resource type="Texture2D" uid="uid://cdrgfkcwkml34" path="res://World/Lightsources/Pole/pole.png" id="2_0hc4o"]
+
+[node name="PointLight2D" type="PointLight2D"]
+position = Vector2(-67, 125)
+color = Color(1, 0.776471, 0.690196, 1)
+energy = 2.48
+texture = ExtResource("1_ns0jx")
+offset = Vector2(2, 41)
+
+[node name="Pole" type="Sprite2D" parent="."]
+position = Vector2(4, 34)
+texture = ExtResource("2_0hc4o")
