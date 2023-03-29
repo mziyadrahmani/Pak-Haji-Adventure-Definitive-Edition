@@ -1,14 +1,10 @@
-[gd_resource type="SpriteFrames" load_steps=26 format=3 uid="uid://dlwvlyiocabj"]
+[gd_resource type="SpriteFrames" load_steps=29 format=3 uid="uid://dlwvlyiocabj"]
 
 [ext_resource type="Texture2D" uid="uid://m7hesv68s1f8" path="res://Sprite/Pak Haji/Assets/Player Climb1.png" id="1_6fhgl"]
-[ext_resource type="Texture2D" uid="uid://brxvkb22o6qah" path="res://Sprite/Pak Haji/Assets/Player Climb2.png" id="2_274xh"]
 [ext_resource type="Texture2D" uid="uid://kda1fej5jc87" path="res://Sprite/Pak Haji/Assets/Player Climb3.png" id="3_bb3m5"]
-[ext_resource type="Texture2D" uid="uid://bxcrr6mdv53p3" path="res://Sprite/Pak Haji/Assets/Player Climb4.png" id="4_3vr4n"]
-[ext_resource type="Texture2D" uid="uid://7umr6s0hg7wr" path="res://Sprite/Pak Haji/Assets/Player Climb5.png" id="5_1225m"]
 [ext_resource type="Texture2D" uid="uid://b5umcjvn7cpur" path="res://Sprite/Pak Haji/Assets/Player Fall3.png" id="8_niwyu"]
 [ext_resource type="Texture2D" uid="uid://deu0ioofcuabo" path="res://Sprite/Pak Haji/Assets/Player Fall4.png" id="9_ipr14"]
 [ext_resource type="Texture2D" uid="uid://bmgelbhima2ph" path="res://Sprite/Pak Haji/Assets/damaged.png" id="10_0a2tx"]
-[ext_resource type="Texture2D" uid="uid://dd1w72fqvwb80" path="res://Sprite/Pak Haji/Assets/Player2.png" id="10_tqye3"]
 [ext_resource type="Texture2D" uid="uid://77d5udxpv0gb" path="res://Sprite/Pak Haji/Assets/Player.png" id="11_26bds"]
 [ext_resource type="Texture2D" uid="uid://crcdgabmwhxmj" path="res://Sprite/Pak Haji/Assets/Player Jump1.png" id="12_n73r3"]
 [ext_resource type="Texture2D" uid="uid://dan8ykdq7hgx2" path="res://Sprite/Pak Haji/Assets/Player Jump2.png" id="13_shmwv"]
@@ -18,6 +14,26 @@
 [ext_resource type="Texture2D" uid="uid://c556fmqrtxt81" path="res://Sprite/Pak Haji/Assets/Player Walk2.png" id="17_km138"]
 [ext_resource type="Texture2D" uid="uid://dwvurtvdfmpwd" path="res://Sprite/Pak Haji/Assets/Player Walk3.png" id="18_aj0s2"]
 [ext_resource type="Texture2D" uid="uid://d4k38wkv3gp1v" path="res://Sprite/Pak Haji/Assets/Player Walk4.png" id="19_frkg4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q4hj3"]
+atlas = ExtResource("1_6fhgl")
+region = Rect2(0, 0, 31, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iv1xj"]
+atlas = ExtResource("1_6fhgl")
+region = Rect2(31, 0, 31, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uarjq"]
+atlas = ExtResource("1_6fhgl")
+region = Rect2(62, 0, 31, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_be1uw"]
+atlas = ExtResource("1_6fhgl")
+region = Rect2(93, 0, 31, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mtmsx"]
+atlas = ExtResource("1_6fhgl")
+region = Rect2(124, 0, 31, 31)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_26qqg"]
 atlas = ExtResource("10_0a2tx")
@@ -47,23 +63,31 @@ region = Rect2(80, 0, 16, 19)
 atlas = ExtResource("10_0a2tx")
 region = Rect2(96, 0, 16, 19)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_s5iwu"]
+atlas = ExtResource("11_26bds")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n4ggd"]
+atlas = ExtResource("11_26bds")
+region = Rect2(32, 0, 32, 32)
+
 [resource]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_6fhgl")
+"texture": SubResource("AtlasTexture_q4hj3")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_274xh")
+"texture": SubResource("AtlasTexture_iv1xj")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_bb3m5")
+"texture": SubResource("AtlasTexture_uarjq")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_3vr4n")
+"texture": SubResource("AtlasTexture_be1uw")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_1225m")
+"texture": SubResource("AtlasTexture_mtmsx")
 }],
 "loop": false,
 "name": &"climb",
@@ -116,10 +140,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("10_tqye3")
+"texture": SubResource("AtlasTexture_s5iwu")
 }, {
 "duration": 1.0,
-"texture": ExtResource("11_26bds")
+"texture": SubResource("AtlasTexture_n4ggd")
 }],
 "loop": true,
 "name": &"idle",

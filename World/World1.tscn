@@ -47,6 +47,7 @@ layer_0/tile_data = PackedInt32Array(589827, 65536, 1, 524292, 65536, 0, 524293,
 [node name="Climbable" type="TileMap" parent="." groups=["climbable"]]
 tile_set = ExtResource("2_ogfrb")
 format = 2
+layer_0/tile_data = PackedInt32Array(458760, 655360, 2, 393224, 655360, 1, 327688, 655360, 1, 262152, 655360, 1, 196616, 655360, 1, 131080, 655360, 1, 65544, 655360, 1, 8, 655360, 0)
 
 [node name="PakHaji" parent="." instance=ExtResource("2_1e1n7")]
 position = Vector2(31, 155)
@@ -64,7 +65,6 @@ offset_left = -532.0
 offset_top = -285.0
 offset_right = 480.0
 offset_bottom = 269.0
-metadata/_edit_lock_ = true
 
 [node name="invertshader" type="ColorRect" parent="Camera2D"]
 visible = false

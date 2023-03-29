@@ -7,7 +7,7 @@ input_name = "screen_uv"
 function = 2
 
 [sub_resource type="VisualShaderNodeVectorOp" id="VisualShaderNodeVectorOp_iuvdo"]
-default_input_values = [0, Vector3(4.749, 1.106, 0), 1, Vector3(1.119, 0.926, 0.62)]
+default_input_values = [0, Vector3(4.749, 1.106, 0), 1, Vector3(1.119, 0.787, 0.488)]
 operator = 2
 
 [sub_resource type="VisualShaderNodeColorFunc" id="VisualShaderNodeColorFunc_v6q8r"]
@@ -46,7 +46,7 @@ void fragment() {
 
 
 // VectorOp:4
-	vec3 n_in4p1 = vec3(1.11900, 0.92600, 0.62000);
+	vec3 n_in4p1 = vec3(1.11900, 0.78700, 0.48800);
 	vec3 n_out4p0 = n_out3p0 * n_in4p1;
 
 
@@ -66,7 +66,7 @@ void fragment() {
 
 }
 "
-graph_offset = Vector2(-94.3771, -32.3168)
+graph_offset = Vector2(-143.314, -49.2772)
 mode = 1
 flags/light_only = false
 nodes/fragment/0/position = Vector2(800, 140)
@@ -80,4 +80,4 @@ nodes/fragment/5/node = SubResource("VisualShaderNodeColorFunc_v6q8r")
 nodes/fragment/5/position = Vector2(600, 120)
 nodes/fragment/6/node = SubResource("VisualShaderNodeTexture_2hkmy")
 nodes/fragment/6/position = Vector2(40, 40)
-nodes/fragment/connections = PackedInt32Array(4, 0, 5, 0, 5, 0, 0, 0, 2, 0, 6, 0, 6, 0, 3, 0, 3, 0, 4, 0)
+nodes/fragment/connections = PackedInt32Array(2, 0, 6, 0, 6, 0, 3, 0, 5, 0, 0, 0, 4, 0, 5, 0, 3, 0, 4, 0)
