@@ -50,13 +50,15 @@ format = 2
 layer_0/tile_data = PackedInt32Array(458760, 655360, 2, 393224, 655360, 1, 327688, 655360, 1, 262152, 655360, 1, 196616, 655360, 1, 131080, 655360, 1, 65544, 655360, 1, 8, 655360, 0)
 
 [node name="PakHaji" parent="." instance=ExtResource("2_1e1n7")]
-position = Vector2(31, 155)
+position = Vector2(-62, 111)
+scale = Vector2(0.8, 0.8)
+SPEED = 80
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(79, 158)
 zoom = Vector2(3, 3)
 position_smoothing_enabled = true
-position_smoothing_speed = 4.992
+position_smoothing_speed = 3.0
 script = ExtResource("2_mw7na")
 
 [node name="defaultshader" type="ColorRect" parent="Camera2D"]
