@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://h2ycwmnb03d0"]
+[gd_scene load_steps=16 format=3 uid="uid://cawtovrw65afv"]
 
 [ext_resource type="Texture2D" uid="uid://teten0s5q4r" path="res://World/buildings/abandonedhouse1.png" id="1_3soh6"]
 [ext_resource type="TileSet" uid="uid://m1bpt1i8eseo" path="res://World/WorldTileset.tres" id="1_fuo4v"]
@@ -10,12 +10,17 @@
 [ext_resource type="Material" uid="uid://dbvo6clhd4py1" path="res://World/Shadermaterial.tres" id="5_3k6bq"]
 [ext_resource type="Texture2D" uid="uid://choljyu036331" path="res://UI/btn1hover.png" id="5_3msj4"]
 [ext_resource type="Shader" uid="uid://cu0kgm7wf63q2" path="res://World/defaultshader.tres" id="5_oq6cr"]
+[ext_resource type="Script" path="res://Global/enemybase.gd" id="11_7t6sn"]
+[ext_resource type="Texture2D" uid="uid://4vu6xmu32s3t" path="res://icon.svg" id="11_vuk0u"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_i240h"]
 shader = ExtResource("5_oq6cr")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_edd0w"]
 size = Vector2(670, 300)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_autj5"]
+size = Vector2(113.778, 113.778)
 
 [node name="World1" type="Node2D"]
 
@@ -118,3 +123,14 @@ texture_pressed = ExtResource("5_3msj4")
 shape = SubResource("RectangleShape2D_edd0w")
 passby_press = true
 action = "jump"
+
+[node name="Spike" type="StaticBody2D" parent="." groups=["can_damage"]]
+position = Vector2(25, 181)
+scale = Vector2(0.140625, 0.140625)
+script = ExtResource("11_7t6sn")
+
+[node name="Sprite" type="Sprite2D" parent="Spike"]
+texture = ExtResource("11_vuk0u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spike"]
+shape = SubResource("RectangleShape2D_autj5")

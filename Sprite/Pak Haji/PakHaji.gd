@@ -4,17 +4,19 @@ extends CharacterBody2D
 @export var SPEED = 100
 @export var JUMP_VELOCITY = -200
 @export var gravity = 500
-#@export var smoothing = 10
 @onready var animsprite = $AnimatedSprite2D
-@onready var tilemap = get_node("../TileMap")
-var isfalling = false
-var isclimbing = false #false = kanan
-#var trunktile = terrainset
+#@onready var tilemap = get_node("../TileMap")
+
+var health = Global.playerhealth
+var isclimbing = false 
+
 func _ready():
-	pass
+	print(health)
+	
 	
 	
 func _physics_process(delta):
+	enemychecker()
 	velocity.y += gravity * delta
 
 	if (velocity.x <0):
@@ -23,7 +25,7 @@ func _physics_process(delta):
 	elif (velocity.x >0):
 		animsprite.flip_h = false
 
-	if is_on_wall_only() :
+	if is_on_wall() :
 		for i in get_slide_collision_count():
 			var collision = get_slide_collision(i)
 			var object = collision.get_collider ( )
@@ -31,9 +33,7 @@ func _physics_process(delta):
 			if object.name == "Climbable" and object.is_in_group("climbable"):
 				isclimbing = true
 				climbing()
-				#print("isonclimbable")
 			else :
-				#
 				isclimbing = false
 	if not is_on_floor() and not isclimbing:
 		#velocity.y += gravity * delta
@@ -86,4 +86,11 @@ func climbing():
 			animsprite.play("climbidle")
 	
 		
-
+#handle damage
+func enemychecker():
+	for i in get_slide_collision_count():
+		var collision = get_slide_collision(i)
+		var object = collision.get_collider ( )
+		if object.is_in_group("can_damage"):
+			var dmger = object.get_parent()
+			health -= dmger.dmg
