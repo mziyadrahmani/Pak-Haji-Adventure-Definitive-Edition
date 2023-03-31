@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://c4aol60qmek8h" path="res://Sprite/Pak Haji/Assets/Player Fall1.png" id="2_xprq1"]
 [ext_resource type="Texture2D" uid="uid://77d5udxpv0gb" path="res://Sprite/Pak Haji/Assets/Player.png" id="11_26bds"]
 [ext_resource type="Texture2D" uid="uid://crcdgabmwhxmj" path="res://Sprite/Pak Haji/Assets/Player Jump1.png" id="12_n73r3"]
-[ext_resource type="Texture2D" uid="uid://epc8jfr80jpb" path="res://Sprite/Pak Haji/Assets/Player Walk1.png" id="16_qsqju"]
+[ext_resource type="Texture2D" uid="uid://dqhnfs5ktlxqh" path="res://Sprite/Pak Haji/Assets/Player Walk1.png" id="16_qsqju"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q4hj3"]
 atlas = ExtResource("1_6fhgl")

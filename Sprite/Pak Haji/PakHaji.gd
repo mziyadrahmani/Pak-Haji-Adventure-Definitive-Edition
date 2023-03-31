@@ -23,7 +23,7 @@ func _physics_process(delta):
 	elif (velocity.x >0):
 		animsprite.flip_h = false
 	
-	if is_on_wall() :
+	if is_on_wall_only() :
 		for i in get_slide_collision_count():
 			var collision = get_slide_collision(i)
 			var object = collision.get_collider ( )
