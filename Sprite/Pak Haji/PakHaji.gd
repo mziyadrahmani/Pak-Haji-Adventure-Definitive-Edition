@@ -15,13 +15,13 @@ func _ready():
 	
 	
 func _physics_process(delta):
+	velocity.y += gravity * delta
 
 	if (velocity.x <0):
 		animsprite.flip_h = true
 		
 	elif (velocity.x >0):
 		animsprite.flip_h = false
-	
 
 	if is_on_wall_only() :
 		for i in get_slide_collision_count():
@@ -35,11 +35,12 @@ func _physics_process(delta):
 			else :
 				#
 				isclimbing = false
-	if not is_on_floor() and not is_on_wall():
-		velocity.y += gravity * delta
+	if not is_on_floor() and not isclimbing:
+		#velocity.y += gravity * delta
 		
 		if (velocity.y < 0):
 			animsprite.play("jump")
+			
 		if (velocity.y > 0):
 			animsprite.play("fall")
 	else :
@@ -64,7 +65,7 @@ func _physics_process(delta):
 
 	elif direction and isclimbing :	
 		velocity.x = direction * SPEED
-		velocity.y += gravity * delta
+		#velocity.y += gravity * delta
 		if not is_on_wall():
 			isclimbing = false 
 	else:
@@ -75,16 +76,14 @@ func _physics_process(delta):
 func climbing():
 	if isclimbing == true  :
 		#print("climb")
-		
 		var updowndir = Input.get_axis("jump", "down")
 		if updowndir :
 			velocity.y = updowndir * SPEED
 			animsprite.speed_scale = abs(velocity.y) * 0.01
 			animsprite.play("climb")
-			
 		else:
 			velocity.y = move_toward(velocity.y, 0, SPEED)
 			animsprite.play("climbidle")
-			#print("isnotclimbing")
-
+	
+		
 

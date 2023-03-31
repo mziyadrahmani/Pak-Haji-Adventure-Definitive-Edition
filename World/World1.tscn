@@ -58,7 +58,7 @@ SPEED = 80
 position = Vector2(79, 158)
 zoom = Vector2(3, 3)
 position_smoothing_enabled = true
-position_smoothing_speed = 3.0
+position_smoothing_speed = 6.0
 script = ExtResource("2_mw7na")
 
 [node name="defaultshader" type="ColorRect" parent="Camera2D"]
