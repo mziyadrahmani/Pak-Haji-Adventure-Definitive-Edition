@@ -7,7 +7,6 @@ extends CharacterBody2D
 #@export var smoothing = 10
 @onready var animsprite = $AnimatedSprite2D
 @onready var tilemap = get_node("../TileMap")
-#@onready var crntcoor = animsprite.get_global_position()
 var isfalling = false
 var isclimbing = false #false = kanan
 #var trunktile = terrainset
@@ -16,24 +15,26 @@ func _ready():
 	
 	
 func _physics_process(delta):
-	#print(crntcoor)
+
 	if (velocity.x <0):
 		animsprite.flip_h = true
 		
 	elif (velocity.x >0):
 		animsprite.flip_h = false
 	
-	
-	for i in get_slide_collision_count():
-		var collision = get_slide_collision(i)
-		var object = collision.get_collider ( )
-		#print(object)
-		if object.name == "Climbable" and object.is_in_group("climbable"):
-			isclimbing = true
-			climbing()
-		else :
-			isclimbing = false	
-			
+
+	if is_on_wall_only() :
+		for i in get_slide_collision_count():
+			var collision = get_slide_collision(i)
+			var object = collision.get_collider ( )
+			#print(object)
+			if object.name == "Climbable" and object.is_in_group("climbable"):
+				isclimbing = true
+				climbing()
+				#print("isonclimbable")
+			else :
+				#
+				isclimbing = false
 	if not is_on_floor() and not is_on_wall():
 		velocity.y += gravity * delta
 		
@@ -72,8 +73,9 @@ func _physics_process(delta):
 	move_and_slide()
 
 func climbing():
-	if isclimbing == true and is_on_wall() :
+	if isclimbing == true  :
 		#print("climb")
+		
 		var updowndir = Input.get_axis("jump", "down")
 		if updowndir :
 			velocity.y = updowndir * SPEED
