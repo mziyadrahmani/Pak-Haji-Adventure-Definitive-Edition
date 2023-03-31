@@ -23,21 +23,21 @@ func _physics_process(delta):
 	elif (velocity.x >0):
 		animsprite.flip_h = false
 	
-	if is_on_wall_only() :
-		for i in get_slide_collision_count():
-			var collision = get_slide_collision(i)
-			var object = collision.get_collider ( )
-			#print(object)
-			if object.name == "Climbable" and object.is_in_group("climbable"):
-				isclimbing = true
-				climbing()
-			else :
-				#print("isnotonclimbable")
-				isclimbing = false
+	
+	for i in get_slide_collision_count():
+		var collision = get_slide_collision(i)
+		var object = collision.get_collider ( )
+		#print(object)
+		if object.name == "Climbable" and object.is_in_group("climbable"):
+			isclimbing = true
+			climbing()
+		else :
+			isclimbing = false	
+			
 	if not is_on_floor() and not is_on_wall():
 		velocity.y += gravity * delta
 		
-		if (velocity.y <= 0):
+		if (velocity.y < 0):
 			animsprite.play("jump")
 		if (velocity.y > 0):
 			animsprite.play("fall")
