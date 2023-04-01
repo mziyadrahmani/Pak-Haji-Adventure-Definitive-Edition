@@ -16,8 +16,14 @@ func _ready():
 	
 	
 func _physics_process(delta):
-	enemychecker()
+	#enemychecker(delta)
+	if health <= 0:
+		emit_signal("player_died")
+		health = 0
+	
 	velocity.y += gravity * delta
+
+
 
 	if (velocity.x <0):
 		animsprite.flip_h = true
@@ -87,10 +93,26 @@ func climbing():
 	
 		
 #handle damage
-func enemychecker():
+func enemychecker(_delta):
 	for i in get_slide_collision_count():
 		var collision = get_slide_collision(i)
 		var object = collision.get_collider ( )
 		if object.is_in_group("can_damage"):
-			var dmger = object.get_parent()
-			health -= dmger.dmg
+			var timer = object.dmgcd
+			var oncd 
+			#print(timer.get_time_left())
+			if timer.get_time_left() > 0 :
+				oncd = true
+			else :
+				oncd = false
+			if not oncd:
+				health -= object.dmg
+				timer.start()
+				if health < 0 :
+					health = 0
+				print(health)
+			
+			
+			
+			
+	
