@@ -3,6 +3,7 @@ var isgamesaved = false
 
 var playermaxhealth = 50
 var playerhealth = playermaxhealth
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass
@@ -12,4 +13,5 @@ func _ready():
 func _process(_delta):
 	pass
 	
-
+func _player_dead():
+	print("dead")

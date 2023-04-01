@@ -9,20 +9,20 @@ extends CharacterBody2D
 
 var health = Global.playerhealth
 var isclimbing = false 
-
+var isdead = false
+var has_called_player_dead = false
 func _ready():
 	print(health)
 	
 	
 	
 func _physics_process(delta):
-	#enemychecker(delta)
-	if health <= 0:
-		emit_signal("player_died")
-		health = 0
-	
+	if health <= 0 and not isdead :
+		isdead = true
+		Global._player_dead()
+	enemychecker()
 	velocity.y += gravity * delta
-
+	
 
 
 	if (velocity.x <0):
@@ -93,7 +93,7 @@ func climbing():
 	
 		
 #handle damage
-func enemychecker(_delta):
+func enemychecker():
 	for i in get_slide_collision_count():
 		var collision = get_slide_collision(i)
 		var object = collision.get_collider ( )
@@ -110,7 +110,8 @@ func enemychecker(_delta):
 				timer.start()
 				if health < 0 :
 					health = 0
-				print(health)
+				else:
+					print(health)
 			
 			
 			

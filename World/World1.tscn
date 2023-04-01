@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cawtovrw65afv"]
+[gd_scene load_steps=18 format=3 uid="uid://cawtovrw65afv"]
 
 [ext_resource type="Script" path="res://Global/Global.gd" id="1_1cec0"]
 [ext_resource type="Texture2D" uid="uid://teten0s5q4r" path="res://World/buildings/abandonedhouse1.png" id="1_3soh6"]
@@ -13,6 +13,7 @@
 [ext_resource type="Shader" uid="uid://cu0kgm7wf63q2" path="res://World/defaultshader.tres" id="5_oq6cr"]
 [ext_resource type="Script" path="res://Global/enemybase.gd" id="11_7t6sn"]
 [ext_resource type="Texture2D" uid="uid://4vu6xmu32s3t" path="res://icon.svg" id="11_vuk0u"]
+[ext_resource type="Theme" uid="uid://drx7ydhy37t5f" path="res://Main Menu/Maintheme.tres" id="12_2tu6p"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_i240h"]
 shader = ExtResource("5_oq6cr")
@@ -84,7 +85,6 @@ offset_right = 438.0
 offset_bottom = 268.0
 
 [node name="Touchbtn" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="Control" type="Control" parent="Touchbtn"]
 layout_mode = 3
@@ -126,10 +126,20 @@ shape = SubResource("RectangleShape2D_edd0w")
 passby_press = true
 action = "jump"
 
+[node name="Label" type="Label" parent="Touchbtn/Control"]
+layout_mode = 0
+offset_left = 895.0
+offset_top = 662.0
+offset_right = 1203.0
+offset_bottom = 694.0
+theme = ExtResource("12_2tu6p")
+text = "(IN DEVELOPMENT) Alpha 1.0.0"
+
 [node name="Spike" type="StaticBody2D" parent="." groups=["can_damage"]]
 position = Vector2(25, 181)
 scale = Vector2(0.140625, 0.140625)
 script = ExtResource("11_7t6sn")
+dmg = 5
 
 [node name="Sprite" type="Sprite2D" parent="Spike"]
 texture = ExtResource("11_vuk0u")
