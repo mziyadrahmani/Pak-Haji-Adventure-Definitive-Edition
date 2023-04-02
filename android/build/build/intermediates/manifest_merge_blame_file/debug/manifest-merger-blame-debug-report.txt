@@ -26,109 +26,114 @@
 19-->D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\AndroidManifest.xml:16:9-41
 20        android:required="true" />
 20-->D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\AndroidManifest.xml:17:9-32
-21    <uses-feature
-21-->D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\src\debug\AndroidManifest.xml:11:5-131
-22        android:name="android.hardware.vulkan.level"
-22-->D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\src\debug\AndroidManifest.xml:11:40-84
-23        android:required="true"
-23-->D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\src\debug\AndroidManifest.xml:11:85-108
-24        android:version="1" />
-24-->D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\src\debug\AndroidManifest.xml:11:109-128
-25
-26    <application
-26-->D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\AndroidManifest.xml:19:5-52:19
-27        android:allowBackup="false"
-27-->D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\AndroidManifest.xml:21:9-36
-28        android:appCategory="game"
-28-->D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\AndroidManifest.xml:23:9-35
-29        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-29-->[androidx.core:core:1.2.0] C:\Users\LENOVO\.gradle\caches\transforms-3\086694f904f7332915774462ffe124fb\transformed\core-1.2.0\AndroidManifest.xml:24:18-86
-30        android:debuggable="true"
-31        android:extractNativeLibs="false"
-32        android:hasFragileUserData="false"
-32-->D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\AndroidManifest.xml:25:9-43
-33        android:icon="@mipmap/icon"
-33-->D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\AndroidManifest.xml:22:9-36
-34        android:isGame="true"
-34-->D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\AndroidManifest.xml:24:9-30
-35        android:label="@string/godot_project_name_string"
-35-->D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\AndroidManifest.xml:20:9-58
-36        android:requestLegacyExternalStorage="false" >
-36-->D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\AndroidManifest.xml:26:9-53
-37        <activity
-37-->D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\AndroidManifest.xml:34:9-50:20
-38            android:name="com.godot.game.GodotApp"
-38-->D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\AndroidManifest.xml:35:13-37
-39            android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize|density|keyboard|navigation|screenLayout|uiMode"
-39-->D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\AndroidManifest.xml:42:13-141
-40            android:excludeFromRecents="false"
-40-->D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\AndroidManifest.xml:39:13-47
-41            android:exported="true"
-41-->D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\AndroidManifest.xml:40:13-36
-42            android:label="@string/godot_project_name_string"
-42-->D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\AndroidManifest.xml:36:13-62
-43            android:launchMode="singleTask"
-43-->D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\AndroidManifest.xml:38:13-44
-44            android:resizeableActivity="true"
-44-->D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\AndroidManifest.xml:43:13-47
-45            android:screenOrientation="landscape"
-45-->D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\AndroidManifest.xml:41:13-50
-46            android:theme="@style/GodotAppSplashTheme" >
-46-->D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\AndroidManifest.xml:37:13-55
-47            <intent-filter>
-47-->D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\AndroidManifest.xml:46:13-49:29
-48                <action android:name="android.intent.action.MAIN" />
-48-->D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\AndroidManifest.xml:47:17-69
-48-->D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\AndroidManifest.xml:47:25-66
-49
-50                <category android:name="android.intent.category.LAUNCHER" />
-50-->D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\AndroidManifest.xml:48:17-77
-50-->D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\AndroidManifest.xml:48:27-74
-51            </intent-filter>
-52        </activity>
-53        <!-- Records the version of the Godot editor used for building -->
-54        <meta-data
-55            android:name="org.godotengine.editor.version"
-56            android:value="4.0.1.stable" /> <!-- Records the version of the Godot library -->
+21
+22    <uses-permission android:name="android.permission.INTERNET" />
+22-->D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\src\debug\AndroidManifest.xml:11:5-67
+22-->D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\src\debug\AndroidManifest.xml:11:22-64
+23
+24    <uses-feature
+24-->D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\src\debug\AndroidManifest.xml:12:5-131
+25        android:name="android.hardware.vulkan.level"
+25-->D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\src\debug\AndroidManifest.xml:12:40-84
+26        android:required="true"
+26-->D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\src\debug\AndroidManifest.xml:12:85-108
+27        android:version="1" />
+27-->D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\src\debug\AndroidManifest.xml:12:109-128
+28
+29    <application
+29-->D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\AndroidManifest.xml:19:5-52:19
+30        android:allowBackup="false"
+30-->D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\AndroidManifest.xml:21:9-36
+31        android:appCategory="game"
+31-->D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\AndroidManifest.xml:23:9-35
+32        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+32-->[androidx.core:core:1.2.0] C:\Users\LENOVO\.gradle\caches\transforms-3\086694f904f7332915774462ffe124fb\transformed\core-1.2.0\AndroidManifest.xml:24:18-86
+33        android:debuggable="true"
+34        android:extractNativeLibs="false"
+35        android:hasFragileUserData="false"
+35-->D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\AndroidManifest.xml:25:9-43
+36        android:icon="@mipmap/icon"
+36-->D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\AndroidManifest.xml:22:9-36
+37        android:isGame="true"
+37-->D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\AndroidManifest.xml:24:9-30
+38        android:label="@string/godot_project_name_string"
+38-->D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\AndroidManifest.xml:20:9-58
+39        android:requestLegacyExternalStorage="false" >
+39-->D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\AndroidManifest.xml:26:9-53
+40        <activity
+40-->D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\AndroidManifest.xml:34:9-50:20
+41            android:name="com.godot.game.GodotApp"
+41-->D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\AndroidManifest.xml:35:13-37
+42            android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize|density|keyboard|navigation|screenLayout|uiMode"
+42-->D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\AndroidManifest.xml:42:13-141
+43            android:excludeFromRecents="false"
+43-->D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\AndroidManifest.xml:39:13-47
+44            android:exported="true"
+44-->D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\AndroidManifest.xml:40:13-36
+45            android:label="@string/godot_project_name_string"
+45-->D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\AndroidManifest.xml:36:13-62
+46            android:launchMode="singleTask"
+46-->D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\AndroidManifest.xml:38:13-44
+47            android:resizeableActivity="true"
+47-->D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\AndroidManifest.xml:43:13-47
+48            android:screenOrientation="landscape"
+48-->D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\AndroidManifest.xml:41:13-50
+49            android:theme="@style/GodotAppSplashTheme" >
+49-->D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\AndroidManifest.xml:37:13-55
+50            <intent-filter>
+50-->D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\AndroidManifest.xml:46:13-49:29
+51                <action android:name="android.intent.action.MAIN" />
+51-->D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\AndroidManifest.xml:47:17-69
+51-->D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\AndroidManifest.xml:47:25-66
+52
+53                <category android:name="android.intent.category.LAUNCHER" />
+53-->D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\AndroidManifest.xml:48:17-77
+53-->D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\AndroidManifest.xml:48:27-74
+54            </intent-filter>
+55        </activity>
+56        <!-- Records the version of the Godot editor used for building -->
 57        <meta-data
-57-->[godot-lib.template_debug.aar] C:\Users\LENOVO\.gradle\caches\transforms-3\4f5dbf1750b950c5f4b00d16f858ebb8\transformed\jetified-godot-lib.template_debug\AndroidManifest.xml:14:9-16:44
-58            android:name="org.godotengine.library.version"
-58-->[godot-lib.template_debug.aar] C:\Users\LENOVO\.gradle\caches\transforms-3\4f5dbf1750b950c5f4b00d16f858ebb8\transformed\jetified-godot-lib.template_debug\AndroidManifest.xml:15:13-59
-59            android:value="4.0.1.stable" />
-59-->[godot-lib.template_debug.aar] C:\Users\LENOVO\.gradle\caches\transforms-3\4f5dbf1750b950c5f4b00d16f858ebb8\transformed\jetified-godot-lib.template_debug\AndroidManifest.xml:16:13-41
-60
-61        <service android:name="org.godotengine.godot.GodotDownloaderService" />
-61-->[godot-lib.template_debug.aar] C:\Users\LENOVO\.gradle\caches\transforms-3\4f5dbf1750b950c5f4b00d16f858ebb8\transformed\jetified-godot-lib.template_debug\AndroidManifest.xml:18:9-80
-61-->[godot-lib.template_debug.aar] C:\Users\LENOVO\.gradle\caches\transforms-3\4f5dbf1750b950c5f4b00d16f858ebb8\transformed\jetified-godot-lib.template_debug\AndroidManifest.xml:18:18-77
-62
-63        <activity
-63-->[godot-lib.template_debug.aar] C:\Users\LENOVO\.gradle\caches\transforms-3\4f5dbf1750b950c5f4b00d16f858ebb8\transformed\jetified-godot-lib.template_debug\AndroidManifest.xml:20:9-24:75
-64            android:name="org.godotengine.godot.utils.ProcessPhoenix"
-64-->[godot-lib.template_debug.aar] C:\Users\LENOVO\.gradle\caches\transforms-3\4f5dbf1750b950c5f4b00d16f858ebb8\transformed\jetified-godot-lib.template_debug\AndroidManifest.xml:21:13-70
-65            android:exported="false"
-65-->[godot-lib.template_debug.aar] C:\Users\LENOVO\.gradle\caches\transforms-3\4f5dbf1750b950c5f4b00d16f858ebb8\transformed\jetified-godot-lib.template_debug\AndroidManifest.xml:22:13-37
-66            android:process=":phoenix"
-66-->[godot-lib.template_debug.aar] C:\Users\LENOVO\.gradle\caches\transforms-3\4f5dbf1750b950c5f4b00d16f858ebb8\transformed\jetified-godot-lib.template_debug\AndroidManifest.xml:23:13-39
-67            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-67-->[godot-lib.template_debug.aar] C:\Users\LENOVO\.gradle\caches\transforms-3\4f5dbf1750b950c5f4b00d16f858ebb8\transformed\jetified-godot-lib.template_debug\AndroidManifest.xml:24:13-72
-68
-69        <provider
-69-->[godot-lib.template_debug.aar] C:\Users\LENOVO\.gradle\caches\transforms-3\4f5dbf1750b950c5f4b00d16f858ebb8\transformed\jetified-godot-lib.template_debug\AndroidManifest.xml:26:9-34:20
-70            android:name="androidx.core.content.FileProvider"
-70-->[godot-lib.template_debug.aar] C:\Users\LENOVO\.gradle\caches\transforms-3\4f5dbf1750b950c5f4b00d16f858ebb8\transformed\jetified-godot-lib.template_debug\AndroidManifest.xml:27:13-62
-71            android:authorities="com.prototype.pha.fileprovider"
-71-->[godot-lib.template_debug.aar] C:\Users\LENOVO\.gradle\caches\transforms-3\4f5dbf1750b950c5f4b00d16f858ebb8\transformed\jetified-godot-lib.template_debug\AndroidManifest.xml:28:13-64
-72            android:exported="false"
-72-->[godot-lib.template_debug.aar] C:\Users\LENOVO\.gradle\caches\transforms-3\4f5dbf1750b950c5f4b00d16f858ebb8\transformed\jetified-godot-lib.template_debug\AndroidManifest.xml:29:13-37
-73            android:grantUriPermissions="true" >
-73-->[godot-lib.template_debug.aar] C:\Users\LENOVO\.gradle\caches\transforms-3\4f5dbf1750b950c5f4b00d16f858ebb8\transformed\jetified-godot-lib.template_debug\AndroidManifest.xml:30:13-47
-74            <meta-data
-74-->[godot-lib.template_debug.aar] C:\Users\LENOVO\.gradle\caches\transforms-3\4f5dbf1750b950c5f4b00d16f858ebb8\transformed\jetified-godot-lib.template_debug\AndroidManifest.xml:31:13-33:64
-75                android:name="android.support.FILE_PROVIDER_PATHS"
-75-->[godot-lib.template_debug.aar] C:\Users\LENOVO\.gradle\caches\transforms-3\4f5dbf1750b950c5f4b00d16f858ebb8\transformed\jetified-godot-lib.template_debug\AndroidManifest.xml:32:17-67
-76                android:resource="@xml/godot_provider_paths" />
-76-->[godot-lib.template_debug.aar] C:\Users\LENOVO\.gradle\caches\transforms-3\4f5dbf1750b950c5f4b00d16f858ebb8\transformed\jetified-godot-lib.template_debug\AndroidManifest.xml:33:17-61
-77        </provider>
-78    </application>
-79
-80</manifest>
+58            android:name="org.godotengine.editor.version"
+59            android:value="4.0.1.stable" /> <!-- Records the version of the Godot library -->
+60        <meta-data
+60-->[godot-lib.template_debug.aar] C:\Users\LENOVO\.gradle\caches\transforms-3\4f5dbf1750b950c5f4b00d16f858ebb8\transformed\jetified-godot-lib.template_debug\AndroidManifest.xml:14:9-16:44
+61            android:name="org.godotengine.library.version"
+61-->[godot-lib.template_debug.aar] C:\Users\LENOVO\.gradle\caches\transforms-3\4f5dbf1750b950c5f4b00d16f858ebb8\transformed\jetified-godot-lib.template_debug\AndroidManifest.xml:15:13-59
+62            android:value="4.0.1.stable" />
+62-->[godot-lib.template_debug.aar] C:\Users\LENOVO\.gradle\caches\transforms-3\4f5dbf1750b950c5f4b00d16f858ebb8\transformed\jetified-godot-lib.template_debug\AndroidManifest.xml:16:13-41
+63
+64        <service android:name="org.godotengine.godot.GodotDownloaderService" />
+64-->[godot-lib.template_debug.aar] C:\Users\LENOVO\.gradle\caches\transforms-3\4f5dbf1750b950c5f4b00d16f858ebb8\transformed\jetified-godot-lib.template_debug\AndroidManifest.xml:18:9-80
+64-->[godot-lib.template_debug.aar] C:\Users\LENOVO\.gradle\caches\transforms-3\4f5dbf1750b950c5f4b00d16f858ebb8\transformed\jetified-godot-lib.template_debug\AndroidManifest.xml:18:18-77
+65
+66        <activity
+66-->[godot-lib.template_debug.aar] C:\Users\LENOVO\.gradle\caches\transforms-3\4f5dbf1750b950c5f4b00d16f858ebb8\transformed\jetified-godot-lib.template_debug\AndroidManifest.xml:20:9-24:75
+67            android:name="org.godotengine.godot.utils.ProcessPhoenix"
+67-->[godot-lib.template_debug.aar] C:\Users\LENOVO\.gradle\caches\transforms-3\4f5dbf1750b950c5f4b00d16f858ebb8\transformed\jetified-godot-lib.template_debug\AndroidManifest.xml:21:13-70
+68            android:exported="false"
+68-->[godot-lib.template_debug.aar] C:\Users\LENOVO\.gradle\caches\transforms-3\4f5dbf1750b950c5f4b00d16f858ebb8\transformed\jetified-godot-lib.template_debug\AndroidManifest.xml:22:13-37
+69            android:process=":phoenix"
+69-->[godot-lib.template_debug.aar] C:\Users\LENOVO\.gradle\caches\transforms-3\4f5dbf1750b950c5f4b00d16f858ebb8\transformed\jetified-godot-lib.template_debug\AndroidManifest.xml:23:13-39
+70            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+70-->[godot-lib.template_debug.aar] C:\Users\LENOVO\.gradle\caches\transforms-3\4f5dbf1750b950c5f4b00d16f858ebb8\transformed\jetified-godot-lib.template_debug\AndroidManifest.xml:24:13-72
+71
+72        <provider
+72-->[godot-lib.template_debug.aar] C:\Users\LENOVO\.gradle\caches\transforms-3\4f5dbf1750b950c5f4b00d16f858ebb8\transformed\jetified-godot-lib.template_debug\AndroidManifest.xml:26:9-34:20
+73            android:name="androidx.core.content.FileProvider"
+73-->[godot-lib.template_debug.aar] C:\Users\LENOVO\.gradle\caches\transforms-3\4f5dbf1750b950c5f4b00d16f858ebb8\transformed\jetified-godot-lib.template_debug\AndroidManifest.xml:27:13-62
+74            android:authorities="com.prototype.pha.fileprovider"
+74-->[godot-lib.template_debug.aar] C:\Users\LENOVO\.gradle\caches\transforms-3\4f5dbf1750b950c5f4b00d16f858ebb8\transformed\jetified-godot-lib.template_debug\AndroidManifest.xml:28:13-64
+75            android:exported="false"
+75-->[godot-lib.template_debug.aar] C:\Users\LENOVO\.gradle\caches\transforms-3\4f5dbf1750b950c5f4b00d16f858ebb8\transformed\jetified-godot-lib.template_debug\AndroidManifest.xml:29:13-37
+76            android:grantUriPermissions="true" >
+76-->[godot-lib.template_debug.aar] C:\Users\LENOVO\.gradle\caches\transforms-3\4f5dbf1750b950c5f4b00d16f858ebb8\transformed\jetified-godot-lib.template_debug\AndroidManifest.xml:30:13-47
+77            <meta-data
+77-->[godot-lib.template_debug.aar] C:\Users\LENOVO\.gradle\caches\transforms-3\4f5dbf1750b950c5f4b00d16f858ebb8\transformed\jetified-godot-lib.template_debug\AndroidManifest.xml:31:13-33:64
+78                android:name="android.support.FILE_PROVIDER_PATHS"
+78-->[godot-lib.template_debug.aar] C:\Users\LENOVO\.gradle\caches\transforms-3\4f5dbf1750b950c5f4b00d16f858ebb8\transformed\jetified-godot-lib.template_debug\AndroidManifest.xml:32:17-67
+79                android:resource="@xml/godot_provider_paths" />
+79-->[godot-lib.template_debug.aar] C:\Users\LENOVO\.gradle\caches\transforms-3\4f5dbf1750b950c5f4b00d16f858ebb8\transformed\jetified-godot-lib.template_debug\AndroidManifest.xml:33:17-61
+80        </provider>
+81    </application>
+82
+83</manifest>

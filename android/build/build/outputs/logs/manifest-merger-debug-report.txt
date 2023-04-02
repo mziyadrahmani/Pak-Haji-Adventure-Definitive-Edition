@@ -26,9 +26,9 @@ MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\LENOVO\.gradl
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] C:\Users\LENOVO\.gradle\caches\transforms-3\dc8283cc248de09f3304e4cb9480bb66\transformed\lifecycle-livedata-core-2.3.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\LENOVO\.gradle\caches\transforms-3\76de43940b62d644ec317b7e6994fa21\transformed\core-runtime-2.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\LENOVO\.gradle\caches\transforms-3\36eceb74a5fa1c30bc0cbcf5f002c0fb\transformed\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:17:1-24:12
-INJECTED from D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\src\debug\AndroidManifest.xml:2:1-29:12
-INJECTED from D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\src\debug\AndroidManifest.xml:2:1-29:12
-INJECTED from D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\src\debug\AndroidManifest.xml:2:1-29:12
+INJECTED from D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\src\debug\AndroidManifest.xml:2:1-30:12
+INJECTED from D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\src\debug\AndroidManifest.xml:2:1-30:12
+INJECTED from D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\src\debug\AndroidManifest.xml:2:1-30:12
 	package
 		ADDED from D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\AndroidManifest.xml:4:5-29
 		INJECTED from D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\AndroidManifest.xml
@@ -100,7 +100,7 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\LE
 		ADDED from D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\AndroidManifest.xml:21:9-36
 		REJECTED from D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\AndroidManifest.xml:21:9-36
 	tools:replace
-		ADDED from D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\src\debug\AndroidManifest.xml:19:9-143
+		ADDED from D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\src\debug\AndroidManifest.xml:20:9-143
 	android:isGame
 		ADDED from D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\AndroidManifest.xml:24:9-30
 		REJECTED from D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\AndroidManifest.xml:24:9-30
@@ -113,7 +113,7 @@ MERGED from D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\bui
 MERGED from D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\AndroidManifest.xml:34:9-50:20
 REJECTED from D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\AndroidManifest.xml:46:13-49:29
 	tools:node
-		ADDED from D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\src\debug\AndroidManifest.xml:22:154-186
+		ADDED from D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\src\debug\AndroidManifest.xml:23:154-186
 	android:screenOrientation
 		ADDED from D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\AndroidManifest.xml:41:13-50
 		REJECTED from D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\AndroidManifest.xml:41:13-50
@@ -142,7 +142,7 @@ REJECTED from D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\b
 		ADDED from D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\AndroidManifest.xml:37:13-55
 		ADDED from D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\AndroidManifest.xml:37:13-55
 	tools:replace
-		ADDED from D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\src\debug\AndroidManifest.xml:22:58-153
+		ADDED from D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\src\debug\AndroidManifest.xml:23:58-153
 	android:name
 		ADDED from D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\AndroidManifest.xml:35:13-37
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
@@ -201,16 +201,20 @@ INJECTED from D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\b
 	android:minSdkVersion
 		INJECTED from D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\AndroidManifest.xml
 		INJECTED from D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\src\debug\AndroidManifest.xml
-uses-feature#android.hardware.vulkan.level
-ADDED from D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\src\debug\AndroidManifest.xml:11:5-131
-	android:version
-		ADDED from D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\src\debug\AndroidManifest.xml:11:109-128
-	tools:node
-		ADDED from D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\src\debug\AndroidManifest.xml:11:19-39
-	android:required
-		ADDED from D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\src\debug\AndroidManifest.xml:11:85-108
+uses-permission#android.permission.INTERNET
+ADDED from D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\src\debug\AndroidManifest.xml:11:5-67
 	android:name
-		ADDED from D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\src\debug\AndroidManifest.xml:11:40-84
+		ADDED from D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\src\debug\AndroidManifest.xml:11:22-64
+uses-feature#android.hardware.vulkan.level
+ADDED from D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\src\debug\AndroidManifest.xml:12:5-131
+	android:version
+		ADDED from D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\src\debug\AndroidManifest.xml:12:109-128
+	tools:node
+		ADDED from D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\src\debug\AndroidManifest.xml:12:19-39
+	android:required
+		ADDED from D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\src\debug\AndroidManifest.xml:12:85-108
+	android:name
+		ADDED from D:\Godot\Godot 4\Pak Haji Adventure - Definitive Edition\android\build\src\debug\AndroidManifest.xml:12:40-84
 meta-data#org.godotengine.library.version
 ADDED from [godot-lib.template_debug.aar] C:\Users\LENOVO\.gradle\caches\transforms-3\4f5dbf1750b950c5f4b00d16f858ebb8\transformed\jetified-godot-lib.template_debug\AndroidManifest.xml:14:9-16:44
 	android:value

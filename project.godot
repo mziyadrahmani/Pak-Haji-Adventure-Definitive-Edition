@@ -14,7 +14,10 @@ config/name="Pak Haji Adventure - Definitive Edition"
 run/main_scene="res://Main Menu/Splash.tscn"
 config/features=PackedStringArray("4.0", "Mobile")
 run/flush_stdout_on_print=true
+boot_splash/bg_color=Color(0, 0, 0, 1)
+boot_splash/image="res://Main Menu/logo_wht.png"
 config/icon="res://icon.svg"
+boot_splash/minimum_display_time=1
 config/quit_on_go_back=false
 
 [autoload]
@@ -32,8 +35,9 @@ editor/last/resources=[]
 
 [display]
 
+window/size/viewport_width=1280
+window/size/viewport_height=720
 window/stretch/mode="canvas_items"
-window/stretch/aspect="ignore"
 
 [editor_plugins]
 
@@ -85,6 +89,7 @@ pointing/emulate_touch_from_mouse=true
 
 [physics]
 
+2d/run_on_separate_thread=true
 2d/default_gravity_vector=Vector2(0, 0)
 
 [rendering]

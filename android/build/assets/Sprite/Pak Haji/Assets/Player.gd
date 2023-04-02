@@ -1,16 +1,16 @@
 extends CharacterBody2D
 
-@onready var rot_tween = $RotTween
-@onready var stween = $STween
+@onready var rot_tween = create_tween()
+@onready var stween = create_tween()
 @onready var sprite = $AnimatedSprite2D
 @onready var audio = $AudioStreamPlayer
 
 @export var speed = 200
 
-@export var jump_height = 64.0
+@export var jump_height = 64.0spr
 @export var jump_time_to_peak = 0.3
 @export var jump_time_to_descent = 0.35
-
+sd
 @export var can_climb = true
 @export var climb_speed = 150
 @export var can_double_jump = true
@@ -276,7 +276,7 @@ func calculate_sprite():
 		if !last_state == STATES.Climb && !is_on_ceiling():
 			if last_state != STATES.Fall:
 				stween.remove_all()
-				stween.interpolate_property(sprite,"scale",null,Vector2(0.85,1.18),0.35,Tween.TRANS_SINE,Tween.EASE_OUT)
+				stween.interpolate_property(sprite,"scale",Vector2(0.85,1.18),0.35,Tween.TRANS_SINE,Tween.EASE_OUT)
 				stween.start()
 			sprite.animation = "fall"
 	elif state == STATES.Glide:

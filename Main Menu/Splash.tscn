@@ -2,29 +2,29 @@
 
 [ext_resource type="Texture2D" uid="uid://dtty1783sf8yh" path="res://Main Menu/ZYDXD Logo.png" id="1_x0k0x"]
 [ext_resource type="Script" path="res://Main Menu/Splash.gd" id="1_yhvs4"]
-[ext_resource type="AnimationLibrary" path="res://Transition.res" id="3_ngioi"]
+[ext_resource type="AnimationLibrary" uid="uid://db744u6r62xwt" path="res://Transition.res" id="3_ngioi"]
 
 [node name="Splash" type="Node2D"]
 script = ExtResource("1_yhvs4")
 
 [node name="ColorRect" type="ColorRect" parent="."]
-offset_left = -75.0
-offset_top = -41.0
-offset_right = 1261.0
-offset_bottom = 727.0
+offset_left = -1286.0
+offset_top = -731.0
+offset_right = 2512.0
+offset_bottom = 1403.0
 color = Color(0, 0, 0, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(555, 316)
+position = Vector2(622, 341)
 scale = Vector2(0.112287, 0.112287)
 texture = ExtResource("1_x0k0x")
 
 [node name="ColorRect2" type="ColorRect" parent="."]
 visible = false
-offset_left = -75.0
-offset_top = -41.0
-offset_right = 1261.0
-offset_bottom = 727.0
+offset_left = -1336.0
+offset_top = -754.0
+offset_right = 2522.0
+offset_bottom = 1440.0
 color = Color(0, 0, 0, 1)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

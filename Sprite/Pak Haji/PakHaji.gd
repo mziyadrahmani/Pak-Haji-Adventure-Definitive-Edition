@@ -56,14 +56,7 @@ func _physics_process(delta):
 			animsprite.speed_scale = abs(velocity.x) * 0.01
 			animsprite.play("walk")
 			
-	if Input.is_action_just_pressed("jump") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
-		var tween = create_tween()
-		tween.set_ease(Tween.EASE_IN_OUT)
-		tween.tween_property(animsprite,"scale",Vector2(1,0.7),0.1)
-		tween.tween_property(animsprite,"scale",Vector2(1,1.2),0.2)
-		tween.tween_property(animsprite,"scale",Vector2(1,1),0.2)
-		
+	
 	
 	var direction = Input.get_axis("left", "right")
 	if direction and not isclimbing:
@@ -91,6 +84,14 @@ func climbing():
 			velocity.y = move_toward(velocity.y, 0, SPEED)
 			animsprite.play("climbidle")
 	
+func _input(event):
+	if event.is_action_pressed("jump") and is_on_floor():
+		velocity.y = JUMP_VELOCITY
+		var tween = create_tween()
+		tween.set_ease(Tween.EASE_IN_OUT)
+		tween.tween_property(animsprite,"scale",Vector2(1,0.7),0.1)
+		tween.tween_property(animsprite,"scale",Vector2(1,1.2),0.2)
+		tween.tween_property(animsprite,"scale",Vector2(1,1),0.2)
 		
 #handle damage
 func enemychecker():
