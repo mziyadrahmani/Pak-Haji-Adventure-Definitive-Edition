@@ -11,16 +11,12 @@ var health = Global.playerhealth
 var isclimbing = false 
 var isdead = false
 signal health_changed(new_health)
-signal dead()
 func _ready():
-	print(health)
-	
+	emit_signal("health_changed",health)
 	
 	
 func _physics_process(delta):
-	if health <= 0 and not isdead :
-		isdead = true
-		emit_signal("dead")
+	
 	enemychecker()
 	velocity.y += gravity * delta
 	

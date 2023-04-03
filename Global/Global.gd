@@ -1,9 +1,9 @@
 extends Node2D
 var isgamesaved = false 
 
-var playermaxhealth = 50
+var playermaxhealth = 100
 var playerhealth = playermaxhealth
-
+var isdead = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass
@@ -12,12 +12,14 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	pass
-	
-func _player_dead():
-	print("dead")
 
 
 
 
-func _on_pak_haji_health_changed(new_health):
-	pass # Replace with function body.
+
+
+
+func _on_health_bar_playerdead():
+	if isdead == false:
+		print("dead")
+		isdead = true

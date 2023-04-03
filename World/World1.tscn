@@ -147,7 +147,6 @@ offset_right = 197.0
 offset_bottom = -141.0
 grow_horizontal = 2
 grow_vertical = 0
-value = 59.0
 nine_patch_stretch = true
 stretch_margin_left = 3
 stretch_margin_top = 3
@@ -208,6 +207,7 @@ texture_pressed = ExtResource("5_3msj4")
 action = "down"
 
 [connection signal="health_changed" from="PakHaji" to="Control/Touchbtn/HealthBar" method="_on_pak_haji_health_changed"]
+[connection signal="playerdead" from="Control/Touchbtn/HealthBar" to="." method="_on_health_bar_playerdead"]
 [connection signal="pressed" from="Control/Touchbtn/TouchScreenButton" to="Control" method="_on_touch_screen_button_pressed"]
 [connection signal="pressed" from="Control/Touchbtn/TouchScreenButton2" to="Control" method="_on_touch_screen_button_2_pressed"]
 [connection signal="pressed" from="Control/Touchbtn/TouchScreenButton3" to="Control" method="_on_touch_screen_button_3_pressed"]
