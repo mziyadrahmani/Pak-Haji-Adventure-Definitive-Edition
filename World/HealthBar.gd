@@ -1,23 +1,15 @@
-extends Node2D
-var isgamesaved = false 
+extends TextureProgressBar
 
-var playermaxhealth = 50
-var playerhealth = playermaxhealth
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
-	
+	pass # Replace with function body.
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta):
+func _process(delta):
 	pass
-	
-func _player_dead():
-	print("dead")
-
-
 
 
 func _on_pak_haji_health_changed(new_health):
-	pass # Replace with function body.
+	value = new_health

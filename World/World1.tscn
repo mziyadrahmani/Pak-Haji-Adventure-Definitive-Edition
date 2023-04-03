@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://cawtovrw65afv"]
+[gd_scene load_steps=21 format=3 uid="uid://cawtovrw65afv"]
 
 [ext_resource type="Script" path="res://Global/Global.gd" id="1_1cec0"]
 [ext_resource type="Texture2D" uid="uid://teten0s5q4r" path="res://World/buildings/abandonedhouse1.png" id="1_3soh6"]
@@ -15,6 +15,9 @@
 [ext_resource type="Script" path="res://Global/enemybase.gd" id="11_7t6sn"]
 [ext_resource type="Texture2D" uid="uid://4vu6xmu32s3t" path="res://icon.svg" id="11_vuk0u"]
 [ext_resource type="Theme" uid="uid://drx7ydhy37t5f" path="res://Main Menu/Maintheme.tres" id="12_2tu6p"]
+[ext_resource type="Script" path="res://World/HealthBar.gd" id="15_7vle4"]
+[ext_resource type="Texture2D" uid="uid://dr8clgv36353y" path="res://UI/barunder.png" id="16_uao2a"]
+[ext_resource type="Texture2D" uid="uid://br6gvpo376d15" path="res://UI/barover.png" id="17_mxkec"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_autj5"]
 size = Vector2(113.778, 113.778)
@@ -24,6 +27,8 @@ shader = ExtResource("5_oq6cr")
 
 [node name="World1" type="Node2D"]
 script = ExtResource("1_1cec0")
+metadata/_edit_vertical_guides_ = []
+metadata/_edit_horizontal_guides_ = []
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 layer = -10
@@ -130,6 +135,31 @@ script = ExtResource("10_0uwrb")
 
 [node name="Touchbtn" type="CanvasLayer" parent="Control"]
 
+[node name="HealthBar" type="TextureProgressBar" parent="Control/Touchbtn"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -197.0
+offset_top = -148.0
+offset_right = 197.0
+offset_bottom = -141.0
+grow_horizontal = 2
+grow_vertical = 0
+value = 59.0
+nine_patch_stretch = true
+stretch_margin_left = 3
+stretch_margin_top = 3
+stretch_margin_right = 3
+stretch_margin_bottom = 3
+texture_under = ExtResource("16_uao2a")
+texture_over = ExtResource("17_mxkec")
+texture_progress = ExtResource("16_uao2a")
+tint_under = Color(0.92549, 0.705882, 0.760784, 0)
+tint_progress = Color(0.45098, 0.878431, 0, 1)
+script = ExtResource("15_7vle4")
+
 [node name="Label" type="Label" parent="Control/Touchbtn"]
 offset_left = 930.0
 offset_top = 674.0
@@ -141,6 +171,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="TouchScreenButton" type="TouchScreenButton" parent="Control/Touchbtn"]
 process_mode = 3
+visible = false
 position = Vector2(12, 458)
 scale = Vector2(0.228516, 0.263672)
 texture_normal = ExtResource("4_sk7jn")
@@ -149,14 +180,16 @@ action = "left"
 
 [node name="TouchScreenButton2" type="TouchScreenButton" parent="Control/Touchbtn"]
 process_mode = 3
-position = Vector2(260, 416)
-scale = Vector2(0.214844, 0.333008)
+visible = false
+position = Vector2(263, 436)
+scale = Vector2(0.214844, 0.306641)
 texture_normal = ExtResource("4_sk7jn")
 texture_pressed = ExtResource("5_3msj4")
 action = "right"
 
 [node name="TouchScreenButton3" type="TouchScreenButton" parent="Control/Touchbtn"]
 process_mode = 3
+visible = false
 position = Vector2(1025, 442)
 rotation = -1.58946
 scale = Vector2(0.214844, 0.333008)
@@ -166,6 +199,7 @@ action = "jump"
 
 [node name="TouchScreenButton4" type="TouchScreenButton" parent="Control/Touchbtn"]
 process_mode = 3
+visible = false
 position = Vector2(1029, 658)
 rotation = -1.58946
 scale = Vector2(0.214844, 0.333008)
@@ -173,6 +207,7 @@ texture_normal = ExtResource("4_sk7jn")
 texture_pressed = ExtResource("5_3msj4")
 action = "down"
 
+[connection signal="health_changed" from="PakHaji" to="Control/Touchbtn/HealthBar" method="_on_pak_haji_health_changed"]
 [connection signal="pressed" from="Control/Touchbtn/TouchScreenButton" to="Control" method="_on_touch_screen_button_pressed"]
 [connection signal="pressed" from="Control/Touchbtn/TouchScreenButton2" to="Control" method="_on_touch_screen_button_2_pressed"]
 [connection signal="pressed" from="Control/Touchbtn/TouchScreenButton3" to="Control" method="_on_touch_screen_button_3_pressed"]
