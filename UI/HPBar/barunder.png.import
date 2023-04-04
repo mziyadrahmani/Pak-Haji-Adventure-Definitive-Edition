@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dhmepynfmrowc"
-path="res://.godot/imported/Popup.png-74891abcb45e6e76425bd458b54183e3.ctex"
+uid="uid://dr8clgv36353y"
+path="res://.godot/imported/barunder.png-347a96a4438110b5c955bb31cd53a3bc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://UI/Popup.png"
-dest_files=["res://.godot/imported/Popup.png-74891abcb45e6e76425bd458b54183e3.ctex"]
+source_file="res://UI/HPBar/barunder.png"
+dest_files=["res://.godot/imported/barunder.png-347a96a4438110b5c955bb31cd53a3bc.ctex"]
 
 [params]
 

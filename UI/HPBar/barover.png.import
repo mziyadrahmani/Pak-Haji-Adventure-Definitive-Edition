@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ct5jr8yn3mayp"
-path="res://.godot/imported/btn1.png-0dfedb140860f78c6e2edc5f8f61ffe8.ctex"
+uid="uid://br6gvpo376d15"
+path="res://.godot/imported/barover.png-19c3fe3c0c2e4a1f404cd257ed0dddf9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://UI/btn1.png"
-dest_files=["res://.godot/imported/btn1.png-0dfedb140860f78c6e2edc5f8f61ffe8.ctex"]
+source_file="res://UI/HPBar/barover.png"
+dest_files=["res://.godot/imported/barover.png-19c3fe3c0c2e4a1f404cd257ed0dddf9.ctex"]
 
 [params]
 
