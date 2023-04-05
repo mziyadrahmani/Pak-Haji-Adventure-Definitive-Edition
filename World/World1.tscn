@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://cawtovrw65afv"]
+[gd_scene load_steps=29 format=3 uid="uid://cawtovrw65afv"]
 
 [ext_resource type="Script" path="res://Global/Global.gd" id="1_1cec0"]
 [ext_resource type="Texture2D" uid="uid://teten0s5q4r" path="res://World/buildings/abandonedhouse1.png" id="1_3soh6"]
@@ -7,9 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://ki68ournfeuv" path="res://World/Lightsources/Pole/lightpole.tscn" id="2_kdyw3"]
 [ext_resource type="Script" path="res://World/Camera2D.gd" id="2_mw7na"]
 [ext_resource type="TileSet" uid="uid://c11jnyih3cmkq" path="res://World/climabletileset.tres" id="2_ogfrb"]
-[ext_resource type="Texture2D" uid="uid://dklbdlvw4sobo" path="res://UI/UI Menu/btn1press.png" id="4_sk7jn"]
 [ext_resource type="Material" uid="uid://dbvo6clhd4py1" path="res://World/Shadermaterial.tres" id="5_3k6bq"]
-[ext_resource type="Texture2D" uid="uid://choljyu036331" path="res://UI/UI Menu/btn1hover.png" id="5_3msj4"]
 [ext_resource type="Shader" uid="uid://cu0kgm7wf63q2" path="res://World/defaultshader.tres" id="5_oq6cr"]
 [ext_resource type="Script" path="res://World/Touchcheck.gd" id="10_0uwrb"]
 [ext_resource type="Script" path="res://Global/enemybase.gd" id="11_7t6sn"]
@@ -18,7 +16,16 @@
 [ext_resource type="Script" path="res://World/HealthBar.gd" id="15_7vle4"]
 [ext_resource type="Texture2D" uid="uid://dr8clgv36353y" path="res://UI/HPBar/barunder.png" id="16_uao2a"]
 [ext_resource type="Texture2D" uid="uid://br6gvpo376d15" path="res://UI/HPBar/barover.png" id="17_mxkec"]
+[ext_resource type="Texture2D" uid="uid://c1trfppi7rfic" path="res://UI/assets/GameplayUI/btnup/ctrl_idle.PNG" id="17_yingh"]
+[ext_resource type="Texture2D" uid="uid://bs5fsvou0iydr" path="res://UI/assets/GameplayUI/btnup/ctrl_pressed.PNG" id="18_frk13"]
+[ext_resource type="Shape2D" uid="uid://mks7llr6omxd" path="res://buttoncontrolsha[e.tres" id="19_8oy14"]
 [ext_resource type="PackedScene" uid="uid://4mxk2phf2vxi" path="res://UI/Inventory/inventory.tscn" id="19_cpi6u"]
+[ext_resource type="Texture2D" uid="uid://drhibqwwkm4j2" path="res://UI/assets/GameplayUI/pause/Pause.PNG" id="19_d2h6s"]
+[ext_resource type="Texture2D" uid="uid://ccva1j2o2a7gj" path="res://UI/assets/GameplayUI/Attack/atk_idle.PNG" id="20_hwmmk"]
+[ext_resource type="Texture2D" uid="uid://b8mc6r48exxp4" path="res://UI/assets/GameplayUI/pause/pause_pressed.PNG" id="20_k0p7x"]
+[ext_resource type="Texture2D" uid="uid://c0vm6nh7obbbb" path="res://UI/assets/GameplayUI/Attack/atk_pressed.PNG" id="21_1ygtr"]
+[ext_resource type="Texture2D" uid="uid://8eawl56012q2" path="res://UI/assets/GameplayUI/Bag/Bag.PNG" id="22_h27m5"]
+[ext_resource type="Texture2D" uid="uid://dooybjxdx5ajr" path="res://UI/assets/GameplayUI/Bag/Bag_pressed.PNG" id="23_axugg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_autj5"]
 size = Vector2(113.778, 113.778)
@@ -169,50 +176,85 @@ theme = ExtResource("12_2tu6p")
 text = "(IN DEVELOPMENT) Alpha 1.0.0"
 metadata/_edit_use_anchors_ = true
 
-[node name="TouchScreenButton" type="TouchScreenButton" parent="Control/Touchbtn"]
+[node name="left" type="TouchScreenButton" parent="Control/Touchbtn"]
 process_mode = 3
-visible = false
-position = Vector2(12, 458)
-scale = Vector2(0.228516, 0.263672)
-texture_normal = ExtResource("4_sk7jn")
-texture_pressed = ExtResource("5_3msj4")
+modulate = Color(1, 1, 1, 0.392157)
+position = Vector2(103, 565)
+rotation = -1.57079
+scale = Vector2(1.2, 1.2)
+texture_normal = ExtResource("17_yingh")
+texture_pressed = ExtResource("18_frk13")
+shape = ExtResource("19_8oy14")
+passby_press = true
 action = "left"
+visibility_mode = 1
 
-[node name="TouchScreenButton2" type="TouchScreenButton" parent="Control/Touchbtn"]
+[node name="right" type="TouchScreenButton" parent="Control/Touchbtn"]
 process_mode = 3
-visible = false
-position = Vector2(263, 436)
-scale = Vector2(0.214844, 0.306641)
-texture_normal = ExtResource("4_sk7jn")
-texture_pressed = ExtResource("5_3msj4")
+modulate = Color(1, 1, 1, 0.392157)
+position = Vector2(326, 473)
+rotation = 1.57079
+scale = Vector2(1.2, 1.2)
+texture_normal = ExtResource("17_yingh")
+texture_pressed = ExtResource("18_frk13")
+shape = ExtResource("19_8oy14")
+passby_press = true
 action = "right"
+visibility_mode = 1
 
-[node name="TouchScreenButton3" type="TouchScreenButton" parent="Control/Touchbtn"]
+[node name="up" type="TouchScreenButton" parent="Control/Touchbtn"]
 process_mode = 3
-visible = false
-position = Vector2(1025, 442)
-rotation = -1.58946
-scale = Vector2(0.214844, 0.333008)
-texture_normal = ExtResource("4_sk7jn")
-texture_pressed = ExtResource("5_3msj4")
+modulate = Color(1, 1, 1, 0.392157)
+position = Vector2(169, 401)
+scale = Vector2(1.2, 1.2)
+texture_normal = ExtResource("17_yingh")
+texture_pressed = ExtResource("18_frk13")
+shape = ExtResource("19_8oy14")
+passby_press = true
 action = "jump"
+visibility_mode = 1
 
-[node name="TouchScreenButton4" type="TouchScreenButton" parent="Control/Touchbtn"]
+[node name="down" type="TouchScreenButton" parent="Control/Touchbtn"]
 process_mode = 3
-visible = false
-position = Vector2(1029, 658)
-rotation = -1.58946
-scale = Vector2(0.214844, 0.333008)
-texture_normal = ExtResource("4_sk7jn")
-texture_pressed = ExtResource("5_3msj4")
+modulate = Color(1, 1, 1, 0.392157)
+position = Vector2(259, 642)
+rotation = 3.14159
+scale = Vector2(1.2, 1.2)
+texture_normal = ExtResource("17_yingh")
+texture_pressed = ExtResource("18_frk13")
+shape = ExtResource("19_8oy14")
+passby_press = true
 action = "down"
+visibility_mode = 1
+
+[node name="attack" type="TouchScreenButton" parent="Control/Touchbtn"]
+modulate = Color(1, 1, 1, 0.392157)
+position = Vector2(1006, 464)
+scale = Vector2(2.18477, 2.23018)
+texture_normal = ExtResource("20_hwmmk")
+texture_pressed = ExtResource("21_1ygtr")
+passby_press = true
+action = "attack"
+
+[node name="pause" type="TouchScreenButton" parent="Control/Touchbtn"]
+position = Vector2(11, 10)
+texture_normal = ExtResource("19_d2h6s")
+texture_pressed = ExtResource("20_k0p7x")
+action = "pauseresume"
+
+[node name="bag" type="TouchScreenButton" parent="Control/Touchbtn"]
+position = Vector2(11, 94)
+texture_normal = ExtResource("22_h27m5")
+texture_pressed = ExtResource("23_axugg")
+action = "inventory"
 
 [node name="inventory" parent="Control/Touchbtn" instance=ExtResource("19_cpi6u")]
+visible = false
 position = Vector2(298, 137)
 
 [connection signal="health_changed" from="PakHaji" to="Control/Touchbtn/HealthBar" method="_on_pak_haji_health_changed"]
 [connection signal="playerdead" from="Control/Touchbtn/HealthBar" to="." method="_on_health_bar_playerdead"]
-[connection signal="pressed" from="Control/Touchbtn/TouchScreenButton" to="Control" method="_on_touch_screen_button_pressed"]
-[connection signal="pressed" from="Control/Touchbtn/TouchScreenButton2" to="Control" method="_on_touch_screen_button_2_pressed"]
-[connection signal="pressed" from="Control/Touchbtn/TouchScreenButton3" to="Control" method="_on_touch_screen_button_3_pressed"]
-[connection signal="pressed" from="Control/Touchbtn/TouchScreenButton4" to="Control" method="_on_touch_screen_button_4_pressed"]
+[connection signal="pressed" from="Control/Touchbtn/left" to="Control" method="_on_touch_screen_button_pressed"]
+[connection signal="pressed" from="Control/Touchbtn/right" to="Control" method="_on_touch_screen_button_2_pressed"]
+[connection signal="pressed" from="Control/Touchbtn/up" to="Control" method="_on_touch_screen_button_3_pressed"]
+[connection signal="pressed" from="Control/Touchbtn/down" to="Control" method="_on_touch_screen_button_4_pressed"]
